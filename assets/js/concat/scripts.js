@@ -43,6 +43,7 @@ jQuery( 'article' ).magnificPopup({
         },
 });
 
+// Add modal native wordpress gallery
 jQuery( '.gallery' ).magnificPopup({
         type: 'image',
         delegate: ".gallery-icon > a",
