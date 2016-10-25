@@ -1,6 +1,11 @@
 asdbTurbo
 ===
 
+[![license](https://img.shields.io/github/license/mashape/apistatus.svg)]()
+[![Travis](https://travis-ci.org/asdbthemes/asdbturbo.svg?branch=master)](https://travis-ci.org/asdbthemes/asdbturbo)
+
+
+
 WordPress Theme for http://turbonsk.ru from WPBuild.ru
 
 I feature some of the web's most exciting technologies like: [Gulp](http://gulpjs.com/), [LibSass](http://sass-lang.com/), [PostCSS](https://github.com/postcss/postcss), [Bourbon](http://bourbon.io/), [Neat](http://neat.bourbon.io/), and [BrowserSync](https://www.browsersync.io/) to help make your development process fast and efficient. I'm also accessible, passing both WCAG 2.0AA and Section 508 standards out of the box.

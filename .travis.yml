@@ -34,6 +34,6 @@ before_script:
 
 script:
   - cd wp-tests/spec && bundle exec rspec test.rb
-  - phpcs --standard=WordPress --extensions=php
+#  - phpcs --standard=WordPress --extensions=php
 #  - phpcs --standard=./codesniffer.ruleset.xml 
 #MySource, PEAR, PHPCS, PSR1, PSR2, Squiz, Zend, WordPress-Core, WordPress-Docs, WordPress-Extra, WordPress-VIP, WordPress
