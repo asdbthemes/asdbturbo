@@ -1,7 +1,7 @@
 asdbTurbo
 ===
 
-[![license](https://img.shields.io/github/license/mashape/apistatus.svg)]()
+[![license](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/asdbthemes/asdbturbo/blob/master/LICENSE)
 [![Travis](https://travis-ci.org/asdbthemes/asdbturbo.svg?branch=master)](https://travis-ci.org/asdbthemes/asdbturbo)
 
 
