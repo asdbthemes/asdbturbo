@@ -17,17 +17,21 @@ php:
   - 5.2
 
 env:
+#  - WP_PROJECT_TYPE=theme WP_VERSION=latest WP_MULTISITE=0 WP_TEST_URL=http://localhost:12000  WP_TEST_USER=test WP_TEST_USER_PASS=test
+#  - WP_PROJECT_TYPE=theme WP_VERSION=latest WP_MULTISITE=1 WP_TEST_URL=http://localhost:12000  WP_TEST_USER=test WP_TEST_USER_PASS=test
+
+#  - WP_VERSION=4.5 WP_MULTISITE=0
+#  - WP_VERSION=4.5 WP_MULTISITE=1
+
   - WP_PROJECT_TYPE=theme
 
   - WP_VERSION=latest WP_MULTISITE=0 
   - WP_VERSION=latest WP_MULTISITE=1 
 
-#  - WP_VERSION=4.5 WP_MULTISITE=0
-#  - WP_VERSION=4.5 WP_MULTISITE=1
-
   - WP_TEST_URL=http://localhost:12000 
   - WP_TEST_USER=test
   - WP_TEST_USER_PASS=test
+
 
 matrix:
   allow_failures:
@@ -43,6 +47,4 @@ before_script:
 
 script:
   - cd wp-tests/spec && bundle exec rspec test.rb
-#  - phpunit
-#  - phpcs --standard=WordPress ./**/*.php
-   - phpcs --standard=./codesniffer.ruleset.xml ./**/*.php 
+  - phpcs --standard=./codesniffer.ruleset.xml ./**/*.php 
