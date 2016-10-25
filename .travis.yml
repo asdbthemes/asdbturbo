@@ -8,17 +8,31 @@ notifications:
   on_failure: change
 
 php:
-  - nightly # PHP 7.0
+  # PHP 7.0
+  # - nightly 
   - 5.6
   - 5.5
   - 5.4
+  - 5.3
+  - 5.2
 
 env:
-  - WP_PROJECT_TYPE=theme WP_VERSION=latest WP_MULTISITE=0 WP_TEST_URL=http://localhost:12000 WP_TEST_USER=test WP_TEST_USER_PASS=test
+  - WP_PROJECT_TYPE=theme
+
+  - WP_VERSION=latest WP_MULTISITE=0 
+  - WP_VERSION=latest WP_MULTISITE=1 
+
+#  - WP_VERSION=4.5 WP_MULTISITE=0
+#  - WP_VERSION=4.5 WP_MULTISITE=1
+
+  - WP_TEST_URL=http://localhost:12000 
+  - WP_TEST_USER=test
+  - WP_TEST_USER_PASS=test
 
 matrix:
   allow_failures:
-    - php: nightly
+  #  - php: nightly
+  - php: 5.6
 
 before_script:
   # Install composer packages before trying to activate themes or plugins
@@ -29,3 +43,6 @@ before_script:
 
 script:
   - cd wp-tests/spec && bundle exec rspec test.rb
+#  - phpunit
+#  - phpcs --standard=WordPress ./**/*.php
+   - phpcs --standard=./codesniffer.ruleset.xml ./**/*.php 
