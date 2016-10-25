@@ -1,4 +1,4 @@
-# Using javascript with wd_s
+# Using javascript with _wpb
 
 - Create a new javascript file and place it in /concat
 - Each file should act as a partial and contain one statement

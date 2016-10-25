@@ -1,4 +1,4 @@
-# Using image sprites with wd_s
+# Using image sprites with _wpb
 
 - Drop an an image into images/sprites
 - Run 'gulp sprites'

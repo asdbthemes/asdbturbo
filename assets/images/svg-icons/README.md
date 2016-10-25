@@ -1,4 +1,4 @@
-# SVG's with wd_s
+# SVG's with _wpb
 
 All of the starter SVG icons included in this repo are from [IcoMoon App](https://icomoon.io/app/). The /svg-icons/ directory is a compileable directory, and is associated with the following tasks in wd_s's [Gulpfile.js](../../blob/master/Gulpfile.js):
 
