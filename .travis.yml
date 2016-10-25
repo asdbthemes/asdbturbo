@@ -34,4 +34,5 @@ before_script:
 
 script:
   - cd wp-tests/spec && bundle exec rspec test.rb
-  - phpcs --standard=WordPress ./**/*.php
+#  - phpcs --standard=WordPress ./**/*.php
+  - phpcs --standard=./codesniffer.ruleset.xml --extensions=php
