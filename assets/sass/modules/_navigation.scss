@@ -1,0 +1,341 @@
+//--------------------------------------------------------------
+// Navigation
+//--------------------------------------------------------------
+
+// Links
+
+a {
+	color: $color-link;
+	text-decoration: none;
+
+//	&:visited {
+//		color: $color-link-visited;
+//	} // &:visited
+
+	&:hover,
+	&:focus,
+	&:active {
+		color: $color-link-hover;
+		transition: all .25s ease;
+	} // &:hover, &:focus, &:active
+} // a
+
+// Default menu (active after a fresh WordPress install)
+
+.menu {
+	@include list-reset;
+
+	li {
+		margin: 0;
+	} // li
+
+	ul {
+		@include list-reset;
+	} // ul
+
+	&.menu-horizontal {
+
+		li {
+			display: inline-block;
+		} // li
+	} // &.menu-horizontal
+
+	&.menu-vertical {
+
+		li {
+			margin: 0;
+		} // li
+
+		a {
+			padding: rem(10);
+			border-bottom: 1px solid $color-background-hr;
+		} // a
+	}
+
+	&.dropdown {
+
+		// Sub-menu
+		ul {
+			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+			float: left;
+			left: -999em;
+			position: absolute;
+			top: 47px;
+			z-index: 99999;
+			background:#2d2d2d;
+
+			// Sub-sub menu
+			ul {
+				left: -999em;
+				top: 0;
+			} // ul
+
+			// Sub-menu items
+			li {
+
+				&:hover > ul,
+				&.focus > ul {
+					left: 100%;
+				} // &:hover > ul, &.focus > ul
+			} // li
+
+			// Sub-menu links
+			a {
+				@include size(rem(240) auto);
+			} // a
+
+			:hover > a,
+			.focus > a {
+			}
+
+			a:hover,
+			a.focus {
+			}
+		} // ul
+
+		// Display sub-menu on hover
+		li:hover > ul,
+		li.focus > ul {
+			left: auto;
+		} //
+
+		// Menu items
+		li {
+			float: left;
+			position: relative;
+
+			&:hover > a,
+			&.focus > a {
+			}
+		} // li
+	} // &.dropdown
+
+	// Menu hyperlinks
+	a {
+		display: block;
+		text-decoration: none;
+		color:#fafafa;
+		line-height:47px;
+		padding-left:16px;
+		padding-right:16px;
+	} // a
+
+	// Current items
+	.current_page_item a,
+	.current-menu-item a {
+	}
+} // .menu
+
+// Main navigation (after creating a menu in the dashboard)
+.main-navigation {
+	@include size(100% auto);
+	font-family:cuprum;
+	clear: both;
+	display: none;
+	float: left;
+
+	@include media($tablet-landscape) {
+		display: block;
+	}
+
+	// Menu area
+	ul {
+		display: none;
+
+		@include media($phone-landscape) {
+			display: block;
+		}
+	} // ul
+
+	&.toggled ul {
+		display: block;
+	}
+} // .main-navigation
+
+// Small menu
+.menu-toggle {
+	display: block;
+
+	@include media($phone-landscape) {
+		display: none;
+	}
+} // .menu-toggle
+
+// Navigation on Comment, Post and Posts
+.comment-navigation,
+.posts-navigation,
+.post-navigation {
+
+	.site-main & {
+		margin: 0 0 rem(24) 0;
+		overflow: hidden;
+	} // .site-main &
+
+	& .nav-previous {
+		@include size(50% auto);
+
+		float: left;
+	} // & .nav-previous
+
+	& .nav-next {
+		@include size(50% auto);
+
+		float: right;
+		text-align: right;
+	} // & .nav-next
+} // .comment-navigation, .posts-navigation, .post-navigation
+
+
+
+.menu > li.current-menu-item > a:before, .menu > li.current-menu-parent > a:before, .menu > li.current_page_parent > a:before, .menu > li.current_page_ancestor > a:before {
+    content: '';
+    height: 4px;
+    left: 0;
+    position: absolute;
+    top: -4px;
+    width: 100%;
+    background: $color-accent;
+}
+
+.menu li:hover > a, .menu > li.current-menu-item:hover li:hover a, .menu > li.current-menu-item a, .menu > li.current-menu-parent > a {background: $color-accent;position:relative;}
+
+.menu > li.current-menu-item li a {background-color: transparent;}
+
+//current-category-ancestor
+//current-menu-ancestor
+//current-menu-parent
+//current-category-parent
+//menu-item-has-children
+
+.home .home-icon.front_page_on {background:$color-accent;}
+.home-icon {
+    float: left;
+    height: 57px;
+    margin-left: 28px;
+    margin-top: -10px;
+    width: 53px;
+}
+.main-navigation .home-icon a {
+    padding: 13px 12px 6px;
+}
+.main-navigation a {
+    display: block;
+    text-decoration: none;
+}
+.home-icon .fa {
+    color: #ffffff;
+    font-size: 30px;
+    line-height: 40px;
+}
+
+#site-navigation {
+    border-bottom: 5px solid #f71800;
+}
+
+#site-navigation {
+    background: #2d2d2d;
+    box-shadow: -1px -5px 0 -1px #393939 inset;
+    margin: 0 auto;
+    min-height: 52px;
+    position: relative;
+}
+
+ul li.menu-item-has-children::after {
+    content: "\f107";
+    font-family:FontAwesome;
+    color:#f1f1f1;
+    display: inline-block;
+    position: absolute;
+    right: 3px;
+    top: 25%;
+}
+
+.nav-links {
+    line-height: 1.2em;
+    font-size: 0.75em;
+    
+.nav-previous {border-right:1px solid #fff;}
+.meta-nav {
+    display: block;
+    font-size: 14px;
+    padding: 4px 8px;
+    background: #bbb;
+    width: auto;
+    color: #f1f1f1;
+    margin-bottom: 10px;
+    font-weight: 600;
+&:hover {background: #f1f1f1;color:#111;}
+}
+
+}
+
+.mobile {
+#mobile-menu a {color:#f1f1f1}
+#mobile-menu button {border-radius:0;border:0;width:50px;padding: 0;text-align:center;height:50px;box-shadow:none;z-index:101;}
+nav#mobile-menu {
+    position: fixed;
+    top: 0;
+    height: 100%;
+    overflow: hidden;
+    background: rgba(0,0,0,0.8);
+    z-index: 99;
+    overflow-y: scroll;
+ul.sub-menu {position:relative;left:0;background:none;top:0;width:100%; a {width:100%;padding-left:35px;}}
+
+ul li.menu-item-has-children:after {
+    content: "\f107";
+    font-family: FontAwesome;
+    color: #f1f1f1;
+    display: inline-block;
+    position: absolute;
+    right: 16px;
+    top: 10px;
+}
+
+.menu>li.current-menu-item>a:before, .menu>li.current-menu-parent>a:before, .menu>li.current_page_ancestor>a:before, .menu>li.current_page_parent>a:before {
+    content: none;
+}
+
+}
+
+#mobile-menu ul li {display:block;width:100%;}
+
+	.header-widget {display:none;}
+	.site-title {font-size: 1em;line-height:1em;}	
+        .site-branding {
+	display:none;		
+	.site-logo img {height:50px;}
+		}
+	.nav-header {}
+	.main-navigation {display: block;}
+	#site-navigation {position:absolute;}
+	.menu {
+	
+	}
+
+
+}
+
+
+ul.slick-dots li button {
+    background: none;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    padding: 3px 6px;
+    font-size: 12px;
+    font-weight: 300;
+}
+
+ul.slick-dots li {
+    display: inline-block;
+    margin-right: 5px;
+}
+
+ul.slick-dots {
+    position: absolute;
+    bottom: 10px;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+}
+.menu.dropdown ul.slick-dots {background:none;}

@@ -1,0 +1,21 @@
+{
+  "name": "wds-hero-widget",
+  "description": "Allows you to add Hero images and videos using Widgets, Shortcodes and template tags!",
+  "license": "GPLv2",
+  "authors": [
+    "WebDevStudios"
+  ],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bourbon": "latest",
+    "neat": "latest",
+    "slick.js": "~1.5.5"
+  }
+}

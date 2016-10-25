@@ -1,0 +1,176 @@
+.mmenu-wrap {
+position:absolute;
+padding:20px;
+background:#f1f1f1;
+}
+
+
+.mmenu-item {padding:20px;background-color: #ffffff;width: 100%;margin-bottom:15px;}
+
+#top-menu {
+    float: left;
+}
+#top-menu ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+#top-menu>ul>li {
+    position: relative;
+    float: left;
+    display: block;
+    margin-left: 12px;
+}
+#top-menu>ul>li:first-child {
+    margin-left: 0;
+}
+
+#top-menu>ul>li.last {
+    margin-right: 0;
+    padding-right: 0;
+}
+#top-menu>ul>li>.under {
+    height: 3px;
+    border-radius: 2px;
+    margin-top: 21px;
+    margin-bottom: 1px;
+    position: relative;
+    z-index: 999;
+}
+#top-menu>ul>li:hover>.under {
+    background: #50b4e6;
+}
+#top-menu>ul>li>.menu-item-wrap {
+    height: 90px;
+    padding: 0 10px;
+    display: block;
+    border-radius: 2px;
+    text-align: center;
+    cursor: pointer;
+}
+#top-menu>ul>li.current-menu-item>.menu-item-wrap {
+    min-width: 90px;
+    background: #50b4e6;
+    position: relative;
+}
+
+#top-menu>ul>li.current-menu-item>.menu-item-wrap:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-top: 15px solid white;
+    border-left: 15px solid transparent;
+    width: 0;
+}
+#top-menu>ul>li>ul:before {
+    content: "";
+    position: absolute;
+    top: -8px;
+    left: 35px;
+    border-bottom: 5px solid #50b4e6;
+    border-right: 5px solid transparent;
+}
+#top-menu>ul>li:last-child>ul {
+    right: 0;
+}
+#top-menu>ul>li:last-child>ul:before {
+    border-left: 5px solid transparent;
+    border-right:none;
+    left: auto;
+    right: 35px;
+}
+#top-menu>ul>li>ul {
+    border: 1px solid #e8e8e8;
+    border-top: 3px solid #50b4e6;
+    position: absolute;
+    top: 111px;
+    width: 215px;
+    background: #ffffff;
+    opacity: 0;
+    visibility: hidden;
+    border-radius: 0 2px 2px 2px;
+    z-index:9999;
+    -moz-transition: opacity .2s ease-in-out;
+    -webkit-transition: opacity .2s ease-in-out;
+    -o-transition: opacity .2s ease-in-out;
+    transition: opacity .2s ease-in-out;
+    border-radius: 0 0 3px 3px;
+}
+#top-menu>ul>li:hover>ul {
+    opacity: 1;
+    visibility: visible;
+}
+#top-menu>ul>li ul li .menu-item-wrap {
+    display: block;
+}
+#top-menu>ul>li ul li .menu-item-wrap a {
+    background: url(../img/arrow-menu-right.png) 5px 50% no-repeat;
+    display: block;
+    padding: 0 10px;
+    -moz-transition: padding .2s ease-in-out, background-position .2s ease-in-out;
+    -webkit-transition: padding .2s ease-in-out, background-position .2s ease-in-out;
+    -o-transition: padding .2s ease-in-out, background-position .2s ease-in-out;
+    transition: padding .2s ease-in-out, background-position .2s ease-in-out;
+}
+#top-menu > ul > li ul li.current-menu-item, #top-menu > ul > li ul li:hover {
+    margin: 0 -4px;
+}
+#top-menu > ul > li ul li:hover .menu-item-wrap a, #top-menu > ul > li ul li.current-menu-item .menu-item-wrap a {
+    background: #50b4e6 url(../img/arrow-menu-right.png) 18px 50% no-repeat;
+    padding-left: 20px;
+}
+#top-menu > ul > li ul li:hover .link-text {
+    color: #fff;
+}
+#top-menu>ul>li ul li .link-text {
+    display: block;
+    border-top: 1px solid #f4f4f4;
+    padding: 9px 10px 8px 20px;
+    text-transform: none;
+    font-size: 13px;
+    color: #898989;
+}
+#top-menu>ul>li ul li:first-child > span .link-text,
+#top-menu>ul>li ul li:hover > span .link-text,
+#top-menu>ul>li ul li.current-menu-item > span .link-text {
+    border-top: 1px solid transparent;
+}
+#top-menu .has-submenu .tile-icon {
+    padding-right: 10px;
+}
+.has-submenu > span .link-text {
+    display: inline-block;
+    padding-right: 12px;
+    background: url("../img/drop-blue.gif") right 50% no-repeat;
+}
+.has-submenu.current-menu-item > span .link-text {
+    background-image: url("../img/drop-white.gif");
+}
+
+#top-menu .tile-icon {
+    display: block;
+    text-align: center;
+    padding: 9px 0 8px 0;
+}
+
+#top-menu .current-menu-item>span .tile-icon .normal-icon,
+#top-menu li>span .tile-icon .active-icon {
+    display: none;
+}
+#top-menu .current-menu-item>span .tile-icon .active-icon {
+    display: inline;
+}
+#top-menu .link-text {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: #575757;
+}
+#top-menu .current-menu-item > span .link-text {
+    color: #fff;
+}
+.top-menu-button {
+    display: none;
+}

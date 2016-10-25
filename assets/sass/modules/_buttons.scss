@@ -1,0 +1,40 @@
+//--------------------------------------------------------------
+// Buttons
+//--------------------------------------------------------------
+
+.button,
+#{$all-buttons}  {
+  appearance: none;
+  background-color: $color-secondary;
+  border: 1px solid $color-secondary;
+  border-radius: $border-radius;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: $font-sans;
+  font-size: $base-font-size;
+  -webkit-font-smoothing: antialiased;
+  font-weight: 600;
+  line-height: 1;
+  padding: $small-spacing $base-spacing;
+  text-decoration: none;
+  transition: background-color $base-duration $base-timing;
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+
+  &:hover,
+  &:focus {
+    background-color: shade($color-secondary, 20%);
+    color: #fff;
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+
+    &:hover {
+      background-color: $color-secondary;
+    }
+  }
+}

@@ -1,0 +1,26 @@
+.menu.dropdown li.megamenu-item {position: inherit;}
+
+li:hover .mmenu-wrap {display:block;}
+
+.mmenu-wrap {
+	position:absolute;
+	width:100%;
+	padding:20px;
+	background:#f1f1f1;
+	z-index: 100;
+	display:none;
+	left:0;
+	border-top: 5px solid #f71800;
+	border-bottom: 5px solid #f71800;
+
+
+a {line-height: 18px;color:#111;}
+
+
+.mod1 h3.entry-title {
+    font-size: 14px;
+    line-height: 18px;
+}
+
+.row, .mod_wrap {margin-bottom:0;}
+}

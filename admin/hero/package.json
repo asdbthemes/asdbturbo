@@ -1,0 +1,21 @@
+{
+  "name": "wds-hero-widget",
+  "version": "1.0.0",
+  "description": "Allows you to add Hero images and videos using Widgets, Shortcodes and template tags!",
+  "author": {
+    "name": "WebDevStudios",
+    "url": "http://webdevstudios.com"
+  },
+  "license": "GPLv2",
+  "devDependencies": {
+    "grunt": "latest",
+    "grunt-autoprefixer": "latest",
+    "grunt-combine-media-queries": "latest",
+    "grunt-contrib-watch": "latest",
+    "grunt-contrib-cssmin": "latest",
+    "grunt-csscomb": "latest",
+    "grunt-sass": "latest",
+    "grunt-wp-i18n": "latest",
+    "load-grunt-tasks": "latest"
+  }
+}

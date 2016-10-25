@@ -1,0 +1,111 @@
+//--------------------------------------------------------------
+// WooCommerce
+//--------------------------------------------------------------
+
+.woocommerce ul.products li.product h3 {
+    font-size: 1.1em;
+	line-height: 1.2em;
+}
+
+ul.products.list li.product div[itemprop="description"] {
+    font-size: 12px;
+    line-height: 18px;
+}
+
+.woocommerce #respond input#submit.alt, .woocommerce a.button.alt, .woocommerce button.button.alt, .woocommerce input.button.alt {background:$color-turbo}
+
+ .bubble {
+    left: 8px;
+    position: absolute;
+    top: 8px;
+    z-index: 9;
+}
+.bubble .inside {
+    background: $color-turbo;
+    display: table;
+    height: 47px;
+    position: relative;
+    width: 47px;
+}
+.bubble .inside .inside-text {
+    color: #fff;
+    display: table-cell;
+    font-size: 13px;
+    font-weight: normal;
+    line-height: 17px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.woocommerce ul.products li.product .price del {
+    color: #777;
+    display:inline;
+    font-size:14px;
+}
+
+.woocommerce ul.products.list li.product img {
+width: 20% !important;
+}
+
+.woocommerce ul.products.list li.product h3,.woocommerce ul.products.list li.product div[itemprop="description"], .woocommerce ul.products.list li.product .price, .woocommerce ul.products.list li.product .gridlist-buttonwrap {
+width: 76% !important;
+}
+
+.woocommerce ul.products.list li.product, .woocommerce-page ul.products.list li.product {
+    margin-bottom: 1em;
+}
+
+
+
+select.orderby {
+    font-size:12px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    color: #888;
+}
+
+
+ins span.woocommerce-Price-amount.amount {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.woof_products_top_panel li a {
+    text-decoration: none;
+    border: 1px solid #933;
+    padding: 3px 10px;
+}
+
+.woocommerce #respond input#submit, .woocommerce a.button, .woocommerce button.button, .woocommerce input.button {
+    font-size: 12px;}
+
+.woocommerce ul.products li.product .button {margin:0;font-size: 13px;}
+
+.woocommerce a.added_to_cart  {
+    display: inline-block;
+    text-align: center;
+    background: #77a464;
+    color: #FFF;
+    padding: 2px;
+    border-radius: 3px;
+    margin-top:6px;
+    width:100%;
+    font-size: 13px;
+}
+
+.woocommerce .list a.added_to_cart {
+    display: inline-block;
+    text-align: center;
+    background: #77a464;
+    color: #FFF;
+    padding: 2px 10px;
+    border-radius: 3px;
+    margin-top:0;
+    width:auto;
+    font-size: 13px;
+}
+
+
+.woocommerce .entry-meta span {
+    margin-right: 2px;
+}

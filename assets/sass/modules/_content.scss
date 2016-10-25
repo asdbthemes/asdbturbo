@@ -1,0 +1,89 @@
+//--------------------------------------------------------------
+// Site Content
+//--------------------------------------------------------------
+.right {
+    float: right;
+}
+
+
+//--------------------------------------------------------------
+// Posts and Pages
+//--------------------------------------------------------------
+
+// Entry Title
+.entry-title {
+	font-size: rem(32);
+	line-height: rem(36);
+} // .entry-title
+
+// Sticy and Comments Link
+.sticky,
+.comments-link {
+	display: block;
+} // .sticky, .comments-link
+
+// hentry
+.hentry {
+	margin: 0 0 rem(24) 0;
+} // .hentry
+
+// byline and update post date
+.byline,
+.updated:not(.published) {
+	display: none;
+} // .byline, .updated:not(.published)
+
+// byline for single and group
+.single .byline,
+.group-blog .byline {
+	display: inline;
+} // .single .byline, .group-blog .byline
+
+// Page content, entry content and entry summary
+.page-content,
+.entry-content,
+.entry-summary {
+	margin: rem(24) 0 0;
+} // .page-content, .entry-content, .entry-summary
+
+// Page links
+.page-links {
+	clear: both;
+	margin: 0 0 rem(24) 0;
+} // .page-links
+
+// Asides
+.blog .format-aside .entry-title,
+.archive .format-aside .entry-title {
+	display: none;
+} // .blog .format-aside .entry-title, .archive .format-aside .entry-title
+
+
+.tagcloud a {
+    display: inline-block;
+    font-size: 13px !important;
+    margin-bottom: 8px;
+    margin-right: 4px;
+    padding: 4px 6px;
+    border: 1px solid $color-accent;
+    color:#111;
+}
+
+
+// Edit link
+.edit-link {
+	margin: 0;
+	padding: 3px 12px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: rgba(0,0,0,0.75);
+} // .edit-link
+
+.edit-link a{
+	color:$color-gray;
+}
+
+.edit-link:hover a {
+	color:$color-white;
+}

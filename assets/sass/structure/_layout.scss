@@ -1,0 +1,151 @@
+//--------------------------------------------------------------
+// Base Layout
+//--------------------------------------------------------------
+
+body {background-color: #f1f1f1;}
+
+// Structure.
+.wrap {
+	@include outer-container;
+	max-width:740px;	
+	padding: 0;
+
+	@include media($tablet-landscape) {
+	@include outer-container;	
+	}
+	@include media($desktop) {
+		@include outer-container;
+		padding: 0;
+	}
+} // .wrap
+
+#page {
+	@include outer-container;
+	background:#fff;
+}
+
+
+#boxed  {
+    -webkit-box-shadow: 0 4px 4px rgba(0,0,0,.2);
+    box-shadow: 0 4px 4px rgba(0,0,0,.2);
+}
+
+.site-header,
+.site-footer {
+
+	@include media($tablet-landscape) {
+		padding: 0;
+	}
+} // .site-header, .site-footer
+.site-footer section{padding-left:$gutter;padding-right:$gutter; }
+
+.site-content {
+	margin: rem(20) auto;
+	padding: 0 30px;
+
+	@include media($desktop) {
+	padding: 0 $gutter;		
+	margin: rem(40) auto rem(60);
+	}
+} // .site-content
+
+.site-branding {padding-left:$gutter;padding-right: $gutter;}
+
+#boxed .site-branding {
+padding-left:0;padding-right: 0;        
+	@include media($tablet-landscape) {	
+	padding-left:$gutter;padding-right: $gutter;	
+
+	}
+	
+	}
+
+#container, .primary-area {
+	@include fill-parent;
+
+	@include media($tablet-landscape) {
+		@include span-columns(8);
+	}
+} // .primary-area
+
+
+.secondary-area {
+	@include fill-parent;
+
+	@include media($tablet-landscape) {
+		@include span-columns(4);
+	}
+} // .secondary-area
+
+.sw3 #container, .sw3  .primary-area {
+	@include fill-parent;
+
+	@include media($tablet-landscape) {
+		@include span-columns(9);
+	}
+} // .primary-area
+
+.sw3 .secondary-area {
+	@include fill-parent;
+
+	@include media($tablet-landscape) {
+		@include span-columns(3);
+	}
+} // .secondary-area
+
+.col-2cr.sw3 .secondary-area {
+
+	@include media($tablet-landscape) {
+	@include shift(-12);
+	}
+} // .secondary-area
+
+.col-2cr.sw4 .secondary-area {
+
+	@include media($tablet-landscape) {
+	@include shift(-12);
+	}
+} // .secondary-area
+
+.col-2cr.sw3 #container,.col-2cr.sw3 .primary-area {
+
+	@include media($tablet-landscape) {
+	@include shift(3);
+	}
+} // .primary-area
+
+.col-2cr.sw4 #container,.col-2cr.sw4 .primary-area {
+
+	@include media($tablet-landscape) {
+	@include shift(4);
+	}
+} // .primary-area
+
+.col-1c .primary-area { 	@include media($tablet-landscape) { @include span-columns(12);} }
+
+.site-branding {padding-top:20px;}
+.site-logo {
+	@include fill-parent;
+
+	@include media($tablet-landscape) {
+		@include span-columns(2);
+	}
+}
+
+.header-widget {
+	@include fill-parent;
+
+	@include media($tablet-landscape) {
+		@include span-columns(2);
+		margin-top:10px;
+	}
+}
+
+.header-rekl {
+	max-height:100px;
+
+	@include media($tablet-landscape) {
+		@include span-columns(8);
+		min-height: 100px;
+	}
+}

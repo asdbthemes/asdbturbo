@@ -1,0 +1,33 @@
+/*
+Theme Name: asdbTurbo
+Theme URI: https://asdbthemes.ru/asdbturbo
+Author: asdbThemes.ru
+Author URI: https://asdbthemes.ru
+Description: Multipurpose WordPress theme compatible with WooCommerce for ecommerce and other industries like corporate, business, photography, personal, blogging, wedding, restaurant etc. Demo Link: https://asdbthemes.ru/asdbrurbo/
+Version: 1.0.1
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: asdbturbo
+Tags: neat, bourbon, light, one-column, two-columns, right-sidebar, left-sidebar, fluid-layout, fixed-layout, responsive-layout, custom-colors, custom-menu, featured-images, flexible-header, full-width-template, post-formats, sticky-post, theme-options, threaded-comments, translation-ready, ajax-post
+
+This theme, like WordPress, is licensed under the GPL.
+
+*/
+
+@import "bourbon";
+@import "utilities/variables/index";
+@import "neat";
+@import "utilities/mixins/index";
+
+@import "base/index";
+@import "structure/index";
+@import "modules/index";
+@import "plugins/index";
+@import "views/index";
+@import "widgets/index";
+@import "theme/index";
+@import "components/fontawesome/font-awesome";
+//@include font-face( cuprum, 'assets/fonts/cuprum-regular', normal);
+//@include font-face( cuprum, 'assets/fonts/cuprum-bold', bold);
+//@include font-face( 'PT Sans', 'assets/fonts/pt-sans-web-regular', normal);
+//@include font-face( 'PT Sans', 'assets/fonts/pt-sans-web-bold', bold);

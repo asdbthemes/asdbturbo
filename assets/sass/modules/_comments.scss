@@ -1,0 +1,237 @@
+//--------------------------------------------------------------
+// Comments
+//--------------------------------------------------------------
+
+#comments {
+ul,ol {list-style:none;margin:0; padding:0;}
+.tabs-title {margin-left: 15px;}
+.tabs-title a {font-size: 18px;}
+.tabs-title span {
+    margin-left: 10px;
+    background: rgba(69,90,100,.6);
+    padding: 6px 10px;
+    border-radius: 5px;
+    color: #fefefe;}
+.tabs-title i.fa {
+    margin-right: 6px;}
+article.comment-body {
+    border: 1px solid #f4f6f7;
+    margin-bottom: 15px;}
+.comment-header {
+    background: #f4f6f7;
+//    position: relative;
+}
+citate {
+    font-weight: 700;}
+.comment-meta {
+    line-height: 1.6rem;
+    font-size: .8rem;
+    margin: 0 0 0 10px;}
+.avatar {
+    display: inline-block;
+    float: left;}
+footer {
+    position: relative;}
+span.reply {
+    position: absolute;
+    right: 0;
+    bottom: 0;}
+footer span.button {
+    margin: 0;
+    padding: 3px 10px;
+    min-width: 52px;}
+.comment-header .comments-num {
+    line-height: 1rem;
+    color: #fefefe;
+    font-weight: 700;
+    background: #607D8B;
+    padding: 3px;
+    right: 0;
+    top: 0;
+    min-width: 52px;}
+.comment-header .comments-num .cnum {
+    padding-left: 11px;}
+.comment-header .comments-num sub {
+    bottom: 0;
+    padding-right: 11px;}
+sub {
+    top: 0;}
+.btn.bg-success {
+    background-color: #82af6f;
+    color: #fff;
+    font-size:11px;
+    line-height:1em;
+    padding: 3px 10px;
+    min-width: 52px;
+	a {color: #fff;}}
+
+
+
+
+}
+.tabs-panel {
+    display: none;
+    padding: 1rem;
+}
+
+.is-active {
+    display: block;
+}
+
+
+.filter, .tabs {
+    border-bottom: solid 1px #f1f1f1;
+    height: 48px;
+    list-style: none;
+    padding-left: 1.25rem;
+}
+.tabs::after, .tabs::before {
+    content: ' ';
+    display: table;
+    -webkit-flex-basis: 0;
+    -ms-flex-preferred-size: 0;
+    flex-basis: 0;
+    -webkit-order: 1;
+    -ms-flex-order: 1;
+    order: 1;
+}
+
+li.tabs-title.is-active a::before {
+    right: -20px;
+    background: url(assets/images/tab-right-shadow.png) no-repeat;
+}
+li.tabs-title.is-active a::after {
+    left: -20px;
+    background: url(assets/images/tab-left-shadow.png) no-repeat;
+}
+
+li.tabs-title.is-active a::after, li.tabs-title.is-active a::before {
+    content: "";
+    width: 20px;
+    height: 19px;
+    display: block;
+    position: absolute;
+    bottom: -1px;
+    z-index: 999;
+}
+
+.nav-tabs>li.is-active>a:focus, .nav-tabs>li.is-active>a:hover, .tabs>li.is-active>a {
+    color: #2c3e50;
+    background-color: #fff;
+    border: 1px solid #eee;
+    border-bottom-color: transparent;
+    cursor: default;
+}
+.tabs-content, .tabs-title>a:focus, .tabs-title>a[aria-selected=true] {
+    background: #fefefe;
+    border-bottom: solid 1px #f1f1f1;
+}
+.tabs-title>a {
+    font-size: 1rem;
+}
+.tabs-title>a {
+    display: block;
+    padding: .9375rem 1.2rem;
+    line-height: 1;
+}
+
+.filter li.is-active, .tabs dd.active, .tabs li.is-active {
+    border-top: 2px solid #455A64;
+    margin-top: -2px;
+    margin-left: 0;
+    margin-right: 0;
+}
+.filter li, .tabs dd, .tabs li {
+    height: 48px;
+    line-height: 48px;
+}
+.tabs dd, .tabs li {
+    font-size: 12px;
+    display: block;
+    float: left;
+    padding: 0;
+    margin: 0;
+    position: relative;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Comment title
+.comments-title {
+	font-size: rem(24);
+} // .comments-title
+
+// Comment list
+.comment-list {
+	list-style: none;
+	margin: 0;
+} // .comment-list
+
+// Comment-meta
+.comment-meta {
+	margin: 0 0 rem(14) 0;
+} // .comment-meta
+
+// Comments avatar
+.avatar {
+	float: left;
+	margin: 0 rem(10) 0 0;
+} // .avatar
+
+// bypostauthor
+.bypostauthor {
+	display: block;
+} // .bypostauthor
+
+// Comment Form
+.comment-form {
+	background: #fff;
+	@include span-columns(12);
+
+	input:not(.submit) {
+		width: 100%;
+
+		@include media($phone-landscape) {
+			max-width: rem(250);
+		}
+	} // input:not(.submit)
+} // .comment-form
+
+// Default labels for comment form
+.comment-form-author,
+.comment-form-email,
+.comment-form-url {
+
+	label {
+		@include span-columns(12);
+
+		@include media($phone-landscape) {
+			width: rem(75);
+		}
+	} // label
+} // .comment-form-author, .comment-form-email, .comment-form-url
+
+
+// Nested comments spacing from mobile to desktop
+.comment-list .children {
+	margin-left: 0;
+	padding-left: rem(20);
+
+	@include media($phone-landscape) {
+		padding-left: rem(35);
+	}
+
+	@include media($tablet-portrait) {
+		padding-left: rem(60);
+	}
+} // .comment-list .children

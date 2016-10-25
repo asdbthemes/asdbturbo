@@ -1,0 +1,30 @@
+/* Основной текст */ .entry-content p {font-size: 90%; padding-bottom: 10px; color: #000000; line-height: 1.5; }
+span.snoska{color:#606060; background:#eeeeee;} 
+span.snoska2{color:#606060; background:#efdac7; font-weight: bold; }
+td.snoskaT{color:#606060; padding: 10px 10px 10px 10px; background: #eeeeee; text-indent:10px; text-align:justify; } 
+/* Вводка. Первый абзац статьи */ p.vvodka{font-size: 90%; font-weight: bold; } 
+/* Подзаголовок */ p.pzag {font-size: 90%; padding-left: 0px; font-weight: bold; }
+/* Имя фотографа */ p.fotograf {font-size: 80%; text-align: right; font-style: italic;}
+/* Таблица */
+.entry-content td.tabl{background: #ffcc90; border-bottom: 3px solid White; padding: 2px 5px 2px 5px; } 
+.entry-content td.tabl-2{background: #E9E1D8; border-bottom: 3px solid White; padding: 2px 5px 2px 5px; }
+.entry-content td.tabl-pz{text-align: center; background: #E9E1D8; border-bottom: 3px solid White; padding: 2px 5px 2px 5px; } 
+/* Заголовок таблицы */ .entry-content caption.tabltop {background: #8B0000; color: White; text-align: center; padding: 2px 5px 2px 5px; border-bottom: 3px inset White; }
+/* Ячейка с подписью */ .wp-caption-text, .entry-content td.podfoto {font-size: 90%; font-style:italic;} 
+/* --- Мнение в тест-драйве --- */ td.t-mnen {font-size: 80%; padding: 10px 10px 10px 10px; background: #eeeeee; text-align:justify; } 
+/* --- Мнение. Информация о тестере -- */ td.t-tester {font-size: 75%; vertical-align: bottom; padding: 5px 5px 5px 5px; background: #d8d8d8; text-align:left; border-bottom: 3px solid #cbcbcb;}
+td.t-spasibo{ font: 12px Arial, sans-serif; color:#8B0000; padding: 10px 10px 10px 10px; border: 3px double #8B0000; text-align: center; } 
+.entry-meta span.entry-category {font-size: 85%;}
+.entry-footer {}
+.tags {
+	font-size:14px;
+	line-height:1em;
+	span {padding:2px 6px 4px;background:#111;color:#fff;margin-right: 4px;}
+	a {
+	display: inline-block;
+	font-size: 13px!important;
+	margin-bottom: 8px;
+	padding: 4px 6px;
+	border: 1px solid #e31e24;
+	color: #111;}
+}

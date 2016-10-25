@@ -1,0 +1,874 @@
+# Copyright (C) 2016 asdbturbo
+# This file is distributed under the same license as the asdbturbo package.
+msgid ""
+msgstr ""
+"Project-Id-Version: asdbturbo\n"
+"Report-Msgid-Bugs-To: https://asdbthemes.ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2016-MO-DA HO:MI+ZONE\n"
+"Last-Translator: asdbThemes.ru <dev@wpbuild.ru>\n"
+"Language-Team: asdbDev Team <dev@wpbuild.ru>\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n\n"
+
+#: 404.php:19
+msgid "Sorry, this page doesn't exist."
+msgstr ""
+
+#: 404.php:24
+msgid "It seems we can’t find what you’re looking for. Perhaps searching can help."
+msgstr ""
+
+#: admin/hero/includes/class-wds-hero-widget.php:83, admin/hero/includes/class-wds-hero-widget.php:84
+msgid "Hero"
+msgstr ""
+
+#: admin/hero/includes/class-wds-hero-widget.php:86, admin/hero/includes/class-wds-hero-widget.php:87
+msgid "$widget_name"
+msgstr ""
+
+#: admin/hero/includes/class-wds-hero-widget.php:96
+msgid "Hero widget."
+msgstr ""
+
+#: admin/hero/includes/class-wds-hero-widget.php:118
+msgid "ID"
+msgstr ""
+
+#: admin/hero/includes/class-wds-hero-widget.php:120
+msgid "Add a unique ID name to this hero"
+msgstr ""
+
+#: admin/hero/includes/class-wds-hero-widget.php:125
+msgid "Classes"
+msgstr ""
+
+#: admin/hero/includes/class-wds-hero-widget.php:127
+msgid "Any additional classes you would like to add to this Hero."
+msgstr ""
+
+#: admin/hero/includes/class-wds-hero-widget.php:132
+msgid "Background Image URL"
+msgstr ""
+
+#: admin/hero/includes/class-wds-hero-widget.php:134
+msgid "The image to apply as the background image."
+msgstr ""
+
+#: admin/hero/includes/class-wds-hero-widget.php:139
+msgid "Background Video URL"
+msgstr ""
+
+#: admin/hero/includes/class-wds-hero-widget.php:141
+msgid "Must be a .mp4 video."
+msgstr ""
+
+#: admin/hero/includes/class-wds-hero-widget.php:146
+msgid "Primary Heading"
+msgstr ""
+
+#: admin/hero/includes/class-wds-hero-widget.php:148
+msgid "Large Heading (top)"
+msgstr ""
+
+#: admin/hero/includes/class-wds-hero-widget.php:149
+msgid "My Heading"
+msgstr ""
+
+#: admin/hero/includes/class-wds-hero-widget.php:153, admin/hero/includes/class-wds-hero-widget.php:156
+msgid "Sub Heading"
+msgstr ""
+
+#: admin/hero/includes/class-wds-hero-widget.php:155
+msgid "Smaller Heading (below primary)"
+msgstr ""
+
+#: admin/hero/includes/class-wds-hero-widget.php:160, admin/hero/includes/class-wds-hero-widget.php:163
+msgid "Button Text"
+msgstr ""
+
+#: admin/hero/includes/class-wds-hero-widget.php:162
+msgid "Displayed below headings."
+msgstr ""
+
+#: admin/hero/includes/class-wds-hero-widget.php:167
+msgid "Button URL"
+msgstr ""
+
+#: admin/hero/includes/class-wds-hero-widget.php:169
+msgid "What URL should the button open?"
+msgstr ""
+
+#: admin/hero/includes/class-wds-hero-widget.php:174
+msgid "Overlay Transparency"
+msgstr ""
+
+#: admin/hero/includes/class-wds-hero-widget.php:176
+msgid "Will automatically calculate CSS safe value."
+msgstr ""
+
+#: admin/hero/includes/class-wds-hero-widget.php:181
+msgid "Overlay Color"
+msgstr ""
+
+#: admin/hero/includes/class-wds-hero-widget.php:183
+msgid "The color of the overlay. Include # or use colors like \"red\""
+msgstr ""
+
+#: admin/hero/includes/class-wds-hero-widget.php:399
+msgid "Hero Type"
+msgstr ""
+
+#: admin/hero/includes/class-wds-hero-widget.php:412
+msgid "Choose Hero Slider:"
+msgstr ""
+
+#: admin/hero/includes/class-wds-hero-widget.php:415
+msgid "%s None %s"
+msgstr ""
+
+#: admin/hero/includes/class-wds-hero-widget.php:426
+msgid "Uses any %sHero Slider%s to slide images in the background."
+msgstr ""
+
+#: admin/hero/includes/class-wds-slider-cpt.php:47
+msgctxt "post type general name"
+msgid "Hero Sliders"
+msgstr ""
+
+#: admin/hero/includes/class-wds-slider-cpt.php:48
+msgctxt "post type singular name"
+msgid "Hero Slider"
+msgstr ""
+
+#: admin/hero/includes/class-wds-slider-cpt.php:49
+msgctxt "admin menu"
+msgid "Hero Sliders"
+msgstr ""
+
+#: admin/hero/includes/class-wds-slider-cpt.php:50
+msgctxt "add new on admin bar"
+msgid "Hero Slider"
+msgstr ""
+
+#: admin/hero/includes/class-wds-slider-cpt.php:51
+msgctxt "book"
+msgid "Add New"
+msgstr ""
+
+#: admin/hero/includes/class-wds-slider-cpt.php:52
+msgid "Add New Hero Slider"
+msgstr ""
+
+#: admin/hero/includes/class-wds-slider-cpt.php:53
+msgid "New Hero Slider"
+msgstr ""
+
+#: admin/hero/includes/class-wds-slider-cpt.php:54
+msgid "Edit Hero Slider"
+msgstr ""
+
+#: admin/hero/includes/class-wds-slider-cpt.php:55
+msgid "View Hero Slider"
+msgstr ""
+
+#: admin/hero/includes/class-wds-slider-cpt.php:56
+msgid "All Hero Sliders"
+msgstr ""
+
+#: admin/hero/includes/class-wds-slider-cpt.php:57
+msgid "Search Hero Sliders"
+msgstr ""
+
+#: admin/hero/includes/class-wds-slider-cpt.php:58
+msgid "Parent Hero Sliders:"
+msgstr ""
+
+#: admin/hero/includes/class-wds-slider-cpt.php:59
+msgid "No Hero Slider found."
+msgstr ""
+
+#: admin/hero/includes/class-wds-slider-cpt.php:60
+msgid "No Hero Slider found in Trash."
+msgstr ""
+
+#: admin/hero/includes/class-wds-slider-cpt.php:80
+msgid "Hero Slider"
+msgstr ""
+
+#: admin/hero/includes/class-wds-slider-cpt.php:88
+msgid "Images"
+msgstr ""
+
+#: admin/hero/includes/class-wds-slider-cpt.php:91
+msgid "You do not need to create a slider if you intend to use a single image in your hero."
+msgstr ""
+
+#: admin/hero/includes/class-wds-slider-cpt.php:96
+msgid "Slider speed in seconds"
+msgstr ""
+
+#: admin/hero/includes/class-wds-slider-cpt.php:100
+msgid "Each image will slide in every %s seconds."
+msgstr ""
+
+#: admin/hero/includes/class-wds-slider-cpt.php:121
+msgid "Add this as a %s or using a shortcode."
+msgstr ""
+
+#: admin/hero/includes/class-wds-slider-cpt.php:123
+msgid "Primary Hero"
+msgstr ""
+
+#: admin/hero/includes/class-wds-slider-cpt.php:126
+msgid "Secondary Hero"
+msgstr ""
+
+#: admin/hero/includes/class-wds-slider-cpt.php:129
+msgid "Parallaxed Horizontal Hero"
+msgstr ""
+
+#: admin/hero/includes/class-wds-slider-cpt.php:132
+msgid "Note that the paralaxed version does not work with video. The layout of this option puts the button on the right, and the Heading on the left w/out the sub-heading."
+msgstr ""
+
+#: admin/hero/includes/class-wds-slider-cpt.php:134
+msgid "Adding a Video"
+msgstr ""
+
+#: admin/hero/includes/class-wds-slider-cpt.php:137
+msgid "The video is added using HTML5. Using a YouTube video is not supported."
+msgstr ""
+
+#: admin/hero/includes/class-wds-slider-cpt.php:139
+msgid "Adding an Overlay"
+msgstr ""
+
+#: admin/mmenu/asdb_menu_options.php:11
+msgid "ASDB Mega Menu Options"
+msgstr ""
+
+#: admin/mmenu/asdb_menu_options.php:17
+msgid "Select menu:"
+msgstr ""
+
+#: admin/mmenu/asdb_menu_options.php:43
+msgid "Use Mega Menu?"
+msgstr ""
+
+#: admin/mmenu/asdb_menu_options.php:45
+msgid "Select Mega Menu Item"
+msgstr ""
+
+#: admin/mmenu/asdb_menu_options.php:53
+msgid "Mega Menu Color"
+msgstr ""
+
+#: admin/mmenu/asdb_menu_options.php:56
+msgid "Mega Menu Hover"
+msgstr ""
+
+#: admin/mmenu/asdb_menu_options.php:61
+msgid "If you want use MegaMenu, first you need create mega menu items"
+msgstr ""
+
+#: admin/mmenu/asdb-mega-menu.php:57
+msgid "Mega menu"
+msgstr ""
+
+#: admin/mmenu/asdb-mega-menu.php:58
+msgid "ASDB Mega Menu"
+msgstr ""
+
+#: admin/mmenu/asdb-mega-menu.php:59
+msgid "Add New Menu Item"
+msgstr ""
+
+#: admin/mmenu/asdb-mega-menu.php:60
+msgid "Edit Menu Item"
+msgstr ""
+
+#: admin/mmenu/asdb-mega-menu.php:61
+msgid "Search Menu Items"
+msgstr ""
+
+#: admin/mmenu/asdb-mega-menu.php:62
+msgid "Sorry: Menu Item Not Found"
+msgstr ""
+
+#: admin/mmenu/asdb-mega-menu.php:63
+msgid "Sorry: Menu Item Not Found In Trash"
+msgstr ""
+
+#: admin/mmenu/includes/class-asdb-mega-menu-walker-nav-menu-edit.php:72
+msgid "Hide this on mobile?"
+msgstr ""
+
+#: admin/mmenu/includes/class-asdb-mega-menu-walker-nav-menu-edit.php:174
+msgid "FontAwesome class Icon (example: fa fa-home)"
+msgstr ""
+
+#: admin/mmenu/includes/class-asdb-mega-menu-walker-nav-menu-edit.php:181
+msgid "Select MegaMenu Type"
+msgstr ""
+
+#: admin/mmenu/includes/class-asdb-mega-menu-walker-nav-menu-edit.php:183
+msgid "- Select MegaMenu Type -"
+msgstr ""
+
+#: admin/mmenu/includes/class-asdb-mega-menu-walker-nav-menu-edit.php:192
+msgid "Select Widget Area to Display"
+msgstr ""
+
+#: admin/mmenu/includes/class-asdb-mega-menu-walker-nav-menu-edit.php:195
+msgid "- Select Widget Area -"
+msgstr ""
+
+#: admin/mmenu/includes/class-asdb-mega-menu-walker-nav-menu-edit.php:206
+msgid "Select Category for Mega Menu"
+msgstr ""
+
+#: admin/mmenu/includes/class-asdb-mega-menu-walker-nav-menu-edit.php:209
+msgid "- Select Category for Mega Menu -"
+msgstr ""
+
+#: admin/mmenu/includes/class-asdb-mega-menu-walker-nav-menu-edit.php:221
+msgid "Select Mega Menu Page to Display"
+msgstr ""
+
+#: admin/mmenu/includes/class-asdb-mega-menu-walker-nav-menu-edit.php:224
+msgid "- Select Mega Menu Page -"
+msgstr ""
+
+#: admin/mmenu/includes/class-asdb-mega-menu-walker.php:211
+msgid "Keep Reading"
+msgstr ""
+
+#: admin/pagebuilder/templates/pagebuilder/part-author-page-comments.php:25
+msgid "More From This Author"
+msgstr ""
+
+#: admin/pbf-block.php:63
+msgid "Default"
+msgstr ""
+
+#: admin/pbf-block.php:65, admin/pbf-hero.php:33
+msgid "Primary"
+msgstr ""
+
+#: admin/pbf-block.php:67, admin/pbf-hero.php:35
+msgid "Secondary"
+msgstr ""
+
+#: admin/pbf-block.php:69
+msgid "Info"
+msgstr ""
+
+#: admin/pbf-block.php:71
+msgid "Success"
+msgstr ""
+
+#: admin/pbf-block.php:73
+msgid "Alert"
+msgstr ""
+
+#: admin/pbf-block.php:81
+msgid "Block Type"
+msgstr ""
+
+#: admin/pbf-block.php:83
+msgid "Select Block Type"
+msgstr ""
+
+#: admin/pbf-block.php:93
+msgid "Block 1"
+msgstr ""
+
+#: admin/pbf-block.php:95
+msgid "Block 2"
+msgstr ""
+
+#: admin/pbf-block.php:97
+msgid "Block 3"
+msgstr ""
+
+#: admin/pbf-block.php:115
+msgid "Block Style"
+msgstr ""
+
+#: admin/pbf-block.php:117
+msgid "Select Block Style"
+msgstr ""
+
+#: admin/pbf-block.php:127, functions/meta-boxes.php:69
+msgid "Style 1"
+msgstr ""
+
+#: admin/pbf-block.php:129
+msgid "Style 2"
+msgstr ""
+
+#: admin/pbf-block.php:131
+msgid "Style 3"
+msgstr ""
+
+#: admin/pbf-block.php:163
+msgid "1"
+msgstr ""
+
+#: admin/pbf-block.php:165
+msgid "2"
+msgstr ""
+
+#: admin/pbf-block.php:167
+msgid "3"
+msgstr ""
+
+#: admin/pbf-block.php:169
+msgid "4"
+msgstr ""
+
+#: admin/pbf-block.php:171
+msgid "6"
+msgstr ""
+
+#: admin/pbf-block.php:191, functions/meta-boxes.php:61
+msgid "No"
+msgstr ""
+
+#: admin/pbf-block.php:193
+msgid "Yes"
+msgstr ""
+
+#: admin/pbf-cf7.php:17
+msgid "No contact forms found"
+msgstr ""
+
+#: admin/pbf-hero.php:37
+msgid "Parallax"
+msgstr ""
+
+#: comments.php:27
+msgid "Comments"
+msgstr ""
+
+#: comments.php:28
+msgid "Pingbacks"
+msgstr ""
+
+#: functions.php:103
+msgid "Primary Menu"
+msgstr ""
+
+#: functions.php:104
+msgid "Optional Mobile Menu"
+msgstr ""
+
+#: functions.php:153
+msgid "Primary Widget Area"
+msgstr ""
+
+#: functions.php:154
+msgid "Secondary Widget Area"
+msgstr ""
+
+#: functions.php:155
+msgid "Header Widget Area"
+msgstr ""
+
+#: functions.php:156
+msgid "Header Ads  Widget Area"
+msgstr ""
+
+#: functions.php:157
+msgid "Footer 1"
+msgstr ""
+
+#: functions.php:158
+msgid "Footer 2"
+msgstr ""
+
+#: functions.php:159
+msgid "Footer 3"
+msgstr ""
+
+#: functions.php:167
+msgid "Widget area for %s"
+msgstr ""
+
+#: functions/inc/asdb_prod_block.php:149, functions/shortcodes.php:268, functions/widgets/asdb-posts-new.php:78
+msgid "Loading..."
+msgstr ""
+
+#: functions/inc/asdb_prod_block.php:175, functions/inc/asdb_prod_block.php:262, functions/shortcodes.php:293, functions/shortcodes.php:380, functions/widgets/asdb-posts-new.php:97, functions/widgets/asdb-posts-new.php:121
+msgid "Load more"
+msgstr ""
+
+#: functions/inc/extras.php:217, functions/inc/extras.php:219, functions/inc/template-tags.php:211
+msgid "Read More"
+msgstr ""
+
+#: functions/inc/kap/class.Kama_Postviews.php:375
+msgid "Views"
+msgstr ""
+
+#: functions/inc/kap/kama-postviews.php:3
+msgid "Counts visits of post or tax term. Works fast with caching plugins like WP Super Cache. To print views count use one of function: <code>&lt;?php kap_views() ?&gt;</code> or <code>&lt;?php fresh_kap_views() ?&gt;</code> where you need fresh views (when page cache plugin enabled)"
+msgstr ""
+
+#: functions/inc/template-tags.php:28
+msgctxt "post date"
+msgid "Posted on %s"
+msgstr ""
+
+#: functions/inc/template-tags.php:33
+msgctxt "post author"
+msgid "by %s"
+msgstr ""
+
+#: functions/inc/template-tags.php:50, functions/inc/template-tags.php:56
+msgid ", "
+msgstr ""
+
+#: functions/inc/template-tags.php:52
+msgid "Posted in %1$s"
+msgstr ""
+
+#: functions/inc/template-tags.php:58
+msgid "Tagged %1$s"
+msgstr ""
+
+#: functions/inc/template-tags.php:64
+msgid "Leave a comment"
+msgstr ""
+
+#: functions/inc/template-tags.php:64
+msgid "1 Comment"
+msgstr ""
+
+#: functions/inc/template-tags.php:64
+msgid "% Comments"
+msgstr ""
+
+#: functions/inc/template-tags.php:71, parts/content/content-page.php:37
+msgid "Edit %s"
+msgstr ""
+
+#: functions/inc/template-tags.php:139
+msgid "Please define default parameters in the form of an array."
+msgstr ""
+
+#: functions/inc/template-tags.php:144
+msgid "Please define an SVG icon filename."
+msgstr ""
+
+#: functions/inc/template-tags.php:222
+msgid "Read more..."
+msgstr ""
+
+#: functions/inc/template-tags.php:377
+msgid "Share This"
+msgstr ""
+
+#: functions/inc/template-tags.php:381, functions/inc/template-tags.php:382
+msgid "Share on Twitter"
+msgstr ""
+
+#: functions/inc/template-tags.php:387, functions/inc/template-tags.php:388
+msgid "Share on Facebook"
+msgstr ""
+
+#: functions/inc/template-tags.php:393, functions/inc/template-tags.php:394
+msgid "Share on LinkedIn"
+msgstr ""
+
+#: functions/inc/template-tags.php:439
+msgid "Toggle menu"
+msgstr ""
+
+#: functions/inc/template-tags.php:440
+msgid "Close menu"
+msgstr ""
+
+#: functions/inc/woo.php:135, functions/inc/woo.php:141, functions/inc/woo.php:147, functions/inc/woo.php:153, functions/inc/woo.php:159
+msgid " Купить"
+msgstr ""
+
+#: functions/meta-boxes.php:31
+msgid "Term Options"
+msgstr ""
+
+#: functions/meta-boxes.php:47
+msgid "Featured Slider"
+msgstr ""
+
+#: functions/meta-boxes.php:83
+msgid "Shortcode for Block"
+msgstr ""
+
+#: functions/meta-boxes.php:93
+msgid "Columns Number"
+msgstr ""
+
+#: functions/meta-boxes.php:109, functions/meta-boxes.php:167, functions/meta-boxes.php:731
+msgid "Global Settings"
+msgstr ""
+
+#: functions/meta-boxes.php:119
+msgid "One Column"
+msgstr ""
+
+#: functions/meta-boxes.php:129
+msgid "Two Column"
+msgstr ""
+
+#: functions/meta-boxes.php:139
+msgid "Three Column"
+msgstr ""
+
+#: functions/meta-boxes.php:151
+msgid "Taxonomy Style"
+msgstr ""
+
+#: functions/meta-boxes.php:219
+msgid "Title Background"
+msgstr ""
+
+#: functions/meta-boxes.php:405
+msgid "Select Category for Featured Posts Slider"
+msgstr ""
+
+#: functions/meta-boxes.php:417
+msgid "Select Таg for Featured Posts Slider"
+msgstr ""
+
+#: functions/meta-boxes.php:429
+msgid "Select limit nember of post"
+msgstr ""
+
+#: functions/meta-boxes.php:445
+msgid "Select Таg for Featured Block 1"
+msgstr ""
+
+#: functions/meta-boxes.php:457
+msgid "Select Таg for Featured Block 2"
+msgstr ""
+
+#: functions/meta-boxes.php:469
+msgid "Select Таg for Featured Block 3"
+msgstr ""
+
+#: functions/meta-boxes.php:481
+msgid "Select Таg for Featured Block 4"
+msgstr ""
+
+#: functions/meta-boxes.php:495
+msgid "Style for Featured Blocks"
+msgstr ""
+
+#: functions/meta-boxes.php:543
+msgid "Post carusel from Category"
+msgstr ""
+
+#: functions/meta-boxes.php:557
+msgid "Select Category for Carusel"
+msgstr ""
+
+#: functions/meta-boxes.php:573
+msgid "Show related posts"
+msgstr ""
+
+#: functions/meta-boxes.php:583, functions/meta-boxes.php:743
+msgid "Select Таg for related"
+msgstr ""
+
+#: functions/meta-boxes.php:585, functions/meta-boxes.php:745
+msgid "Select Tag for related"
+msgstr ""
+
+#: functions/meta-boxes.php:599
+msgid "Number Links "
+msgstr ""
+
+#: functions/meta-boxes.php:715
+msgid "Dont Show"
+msgstr ""
+
+#: functions/meta-boxes.php:723
+msgid "Individual Tag"
+msgstr ""
+
+#: functions/theme-options.php:1965
+msgid "Arabic"
+msgstr ""
+
+#: functions/theme-options.php:1973
+msgid "Bengali"
+msgstr ""
+
+#: functions/theme-options.php:1981
+msgid "Cyrillic"
+msgstr ""
+
+#: functions/theme-options.php:1989
+msgid "Cyrillic Ext"
+msgstr ""
+
+#: functions/theme-options.php:1997
+msgid "Devanagari"
+msgstr ""
+
+#: functions/theme-options.php:2005
+msgid "Greek"
+msgstr ""
+
+#: functions/theme-options.php:2013
+msgid "Greek Ext"
+msgstr ""
+
+#: functions/theme-options.php:2021
+msgid "Gujarati"
+msgstr ""
+
+#: functions/theme-options.php:2029
+msgid "Hebrew"
+msgstr ""
+
+#: functions/theme-options.php:2037
+msgid "Khmer"
+msgstr ""
+
+#: functions/theme-options.php:2045
+msgid "Latin"
+msgstr ""
+
+#: functions/theme-options.php:2053
+msgid "Latin Ext"
+msgstr ""
+
+#: functions/theme-options.php:2061
+msgid "Tamil"
+msgstr ""
+
+#: functions/theme-options.php:2069
+msgid "Telugu"
+msgstr ""
+
+#: functions/theme-options.php:2077
+msgid "Thai"
+msgstr ""
+
+#: functions/theme-options.php:2085
+msgid "Vietnamese"
+msgstr ""
+
+#: functions/widgets/asdb-ad.php:27
+msgid "Code"
+msgstr ""
+
+#: header.php:30
+msgid "Skip to content"
+msgstr ""
+
+#: parts/content/content-none.php:15
+msgid "Nothing Found"
+msgstr ""
+
+#: parts/content/content-none.php:22
+msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+
+#: parts/content/content-none.php:26
+msgid "Sorry, but nothing matched your search terms. Please try again with some different keywords."
+msgstr ""
+
+#: parts/content/content-none.php:32
+msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help."
+msgstr ""
+
+#: parts/content/content-page.php:25, parts/content/content.php:38
+msgid "Pages:"
+msgstr ""
+
+#: parts/content/content.php:33
+msgid "Continue reading %s <span class=\"meta-nav\">&rarr;</span>"
+msgstr ""
+
+#: parts/page-templates/page-title-base.php:31
+msgid "Search result"
+msgstr ""
+
+#: parts/page-templates/page-title-base.php:35
+msgid "Search results"
+msgstr ""
+
+#: parts/page-templates/page-title-base.php:47
+msgid "Error 404."
+msgstr ""
+
+#: parts/page-templates/page-title-base.php:47
+msgid "Page not found!"
+msgstr ""
+
+#: parts/page-templates/page-title-base.php:55
+msgid "Author:"
+msgstr ""
+
+#: parts/page-templates/page-title-base.php:61
+msgid "Category:"
+msgstr ""
+
+#: parts/page-templates/page-title-base.php:67
+msgid "Tagged:"
+msgstr ""
+
+#: parts/page-templates/page-title-base.php:73
+msgid "Daily Archive:"
+msgstr ""
+
+#: parts/page-templates/page-title-base.php:79
+msgid "Monthly Archive:"
+msgstr ""
+
+#: parts/page-templates/page-title-base.php:85
+msgid "Yearly Archive:"
+msgstr ""
+
+#: parts/sections/section-related-tag.php:2, parts/sections/section-related.php:2
+msgid "Related Posts"
+msgstr ""
+
+#: parts/sections/subfooter.php:15
+msgid "All Rights Reserved."
+msgstr ""
+
+#: parts/sections/subfooter.php:20
+msgid "Theme by"
+msgstr ""
+
+#: parts/sections/subfooter.php:20
+msgid "Development"
+msgstr ""
+
+#: search.php:20
+msgid "Search Results for: %s"
+msgstr ""
+
+#: searchform.php:2
+msgid "To search this site, enter a search term"
+msgstr ""
+
+#: searchform.php:3
+msgctxt "asdbturbo"
+msgid "Search"
+msgstr ""
+
+#: single.php:26
+msgid "Tags: "
+msgstr ""

@@ -1,0 +1,32 @@
+{
+  "name": "asdbturbo",
+  "description": "A WordPress theme for http://turbonsk.ru.",
+  "version": "1.0.0",
+  "keywords": [
+    "css",
+    "js",
+    "sass",
+    "mobile-first",
+    "responsive",
+    "front-end",
+    "framework",
+    "web",
+    "wordpress"
+  ],
+  "homepage": "https://asdbthemes.ru/asdbturbo",
+  "main": [
+    "sass/style.scss",
+    "style.css"
+  ],
+  "ignore": [
+    ".jshintrc",
+    "**/*.txt",
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+  }
+}
