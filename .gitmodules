@@ -1,0 +1,3 @@
+[submodule "option-tree"]
+	path = option-tree
+	url = https://github.com/valendesigns/option-tree.git
