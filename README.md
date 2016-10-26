@@ -2,7 +2,11 @@ asdbTurbo
 ===
 
 [![license](https://img.shields.io/badge/License-GPL2%2B-blue.svg)](https://github.com/asdbthemes/asdbturbo/blob/master/LICENSE)
+[![Wordpress](https://img.shields.io/badge/Wordpress-4.6.1%20tested-green.svg)]()
 [![Travis](https://travis-ci.org/asdbthemes/asdbturbo.svg?branch=master)](https://travis-ci.org/asdbthemes/asdbturbo)
+[![Version](https://img.shields.io/badge/Version-1.0.0-red.svg)]()
+
+
 
 
 
