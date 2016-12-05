@@ -280,7 +280,7 @@ function asdb_deregister_styles() {
 add_action( 'wp_print_styles', 'asdb_deregister_styles', 100 );
 
 function asdb_deregister_scripts() {
-	wp_deregister_script( 'jquery-form' );
-	//wp_deregister_script( 'contact-form-7' );
+	// wp_deregister_script( 'jquery-form' );
+	// wp_deregister_script( 'contact-form-7' );
 }
 add_action( 'wp_print_scripts', 'asdb_deregister_scripts', 100 );
