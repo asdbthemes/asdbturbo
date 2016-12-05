@@ -78,14 +78,12 @@ if ( ! function_exists( 'asdb_dynamic_css' ) ) {
 			// container width
 			if ( ot_get_option('container-width') !== '1200' ) {
 				if ( ot_get_option( 'boxed' ) === 'on') {
-					$styles .= '#boxed { max-width: '.ot_get_option('container-width').'px; margin:0 auto;}'."\n";
-					$styles .= '#boxed #page { max-width: '.ot_get_option('container-width').'px; }'."\n";
-//					$styles .= '#boxed .row { max-width: '.ot_get_option('container-width').'px; }'."\n";
-//					$styles .= '#boxed .row .container-inner { max-width: '.ot_get_option('container-width').'px; }'."\n";
+					$styles .= '#boxed { max-width: ' . ot_get_option( 'container-width' ) . 'px; margin:0 auto;}' . "\n";
+					$styles .= '#boxed #page { max-width: ' . ot_get_option( 'container-width' ) . 'px; }' . "\n";
+					$styles .= '#boxed .row,#boxed .wrap { max-width: '.ot_get_option('container-width').'px; }'."\n";
 				} else {
-//   					$styles .= '#page { max-width: '.ot_get_option('container-width').'px; }'."\n";
-					//$styles .= '.row { max-width: '.ot_get_option('container-width').'px; }'."\n";
-					$styles .= '.container-inner { max-width: '.ot_get_option('container-width').'px; }'."\n";
+					$styles .= '.full-width #page { max-width: ' . ot_get_option( 'container-width' ) . 'px; }' . "\n";
+					$styles .= '.full-width .wrap,.full-width .row{ max-width: ' . ot_get_option( 'container-width' ) . 'px; }' . "\n";
 				}
 			}
 			// header logo max-height
