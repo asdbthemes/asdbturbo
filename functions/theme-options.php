@@ -2,15 +2,17 @@
 
 
 
-/*  Initialize the options before anything else.
+/*
+  Initialize the options before anything else.
 /* ------------------------------------ */
 add_action( 'admin_init', 'custom_theme_options', 1 );
 
 
-/*  Build the custom settings & update OptionTree.
+/*
+  Build the custom settings & update OptionTree.
 /* ------------------------------------ */
 function custom_theme_options() {
-     $gfont = new WPB_Gfonts();
+	 $gfont = new WPB_Gfonts();
 
 	// Get a copy of the saved settings array.
 	$saved_settings = get_option( 'option_tree_settings', array() );
@@ -18,72 +20,72 @@ function custom_theme_options() {
 	// Custom settings array that will eventually be passed to the OptionTree Settings API Class.
 	$custom_settings = array(
 
-/*  Help pages
+/*
+  Help pages
 /* ------------------------------------ */
 	'contextual_help' => array(
-      'content'       => array(
-        array(
-          'id'        => 'general_help',
-          'title'     => 'Documentation',
-          'content'   => '
-			<h1>https://asdbthemes.ru/asdbbase/</h1>
-			<p>Thanks for using this theme! Enjoy.</p>
-		'
-        )
-      )
-    ),
+	  'content'       => array(
+		array(
+		  'id'        => 'general_help',
+		  'title'     => 'Documentation',
+		  'content'   => '<h1>https://asdbthemes.ru/asdbbase/</h1><p>Thanks for using this theme! Enjoy.</p>',
+		),
+	  ),
+	),
 
-/*  Admin panel sections
+/*
+  Admin panel sections
 /* ------------------------------------ */
 	'sections'        => array(
 		array(
 			'id'		=> 'general',
-			'title'		=> 'General'
+			'title'		=> 'General',
 		),
 		array(
 			'id'		=> 'blog',
-			'title'		=> 'Blog'
+			'title'		=> 'Blog',
 		),
 		array(
 			'id'		=> 'header',
-			'title'		=> 'Header'
+			'title'		=> 'Header',
 		),
 		array(
 			'id'		=> 'footer',
-			'title'		=> 'Footer'
+			'title'		=> 'Footer',
 		),
 		array(
 			'id'		=> 'layout',
-			'title'		=> 'Layout'
+			'title'		=> 'Layout',
 		),
 		array(
 			'id'		=> 'sidebars',
-			'title'		=> 'Sidebars'
+			'title'		=> 'Sidebars',
 		),
 		array(
 			'id'		=> 'social-links',
-			'title'		=> 'Social Links'
+			'title'		=> 'Social Links',
 		),
 		array(
 			'id'		=> 'styling',
-			'title'		=> 'Styling'
+			'title'		=> 'Styling',
 		),
 		array(
 			'id'		=> 'fonts',
-			'title'		=> 'Fonts'
+			'title'		=> 'Fonts',
 		),
 		array(
 			'id'		=> 'site',
-			'title'		=> 'Custom Post Type'
+			'title'		=> 'Custom Post Type',
 		),
 		array(
 			'id'		=> 'addons',
-			'title'		=> 'Addons'
+			'title'		=> 'Addons',
 		),
 
 	),
 
-/*  Theme options
+/*
+  Theme options
 /* ------------------------------------ */
 	'settings'        => array(
 		// General: Favicon
@@ -93,7 +95,7 @@ function custom_theme_options() {
 			'desc'		=> 'Upload a 16x16px Png/Gif image that will be your favicon',
 			'type'		=> 'upload',
 			'std'		=> get_template_directory_uri() . '/assets/images/favicon.png',
-			'section'	=> 'general'
+			'section'	=> 'general',
 		),
 		array(
 			'id'		=> 'color_accent',
@@ -101,7 +103,7 @@ function custom_theme_options() {
 			'desc'		=> '',
 			'type'		=> 'colorpicker',
 			'std'		=> '#e31e24',
-			'section'	=> 'general'
+			'section'	=> 'general',
 		),
 		array(
 			'id'		=> 'color_primary',
@@ -109,7 +111,7 @@ function custom_theme_options() {
 			'desc'		=> 'Menu, footer Background color',
 			'type'		=> 'colorpicker',
 			'std'		=> '#2d2d2d',
-			'section'	=> 'general'
+			'section'	=> 'general',
 		),
 		array(
 			'id'		=> 'color_secondary',
@@ -117,7 +119,7 @@ function custom_theme_options() {
 			'desc'		=> 'Menu, footer color',
 			'type'		=> 'colorpicker',
 			'std'		=> '#fafafa',
-			'section'	=> 'general'
+			'section'	=> 'general',
 		),
 
 		// General: Tracking Code
@@ -127,7 +129,7 @@ function custom_theme_options() {
 			'desc'		=> 'Paste your Google Analytics (or other) tracking code here. It will be inserted before the closing body tag of your theme.',
 			'type'		=> 'textarea-simple',
 			'section'	=> 'general',
-			'rows'		=> '3'
+			'rows'		=> '3',
 		),
 		// General: Comments
 		array(
@@ -136,7 +138,7 @@ function custom_theme_options() {
 			'desc'		=> 'Set background color and/or upload your own background image',
 			'type'		=> 'background',
 			'std'		=> '#f1f1f1',
-			'section'	=> 'general'
+			'section'	=> 'general',
 		),
 		array(
 			'id'		=> 'page-comments',
@@ -144,7 +146,7 @@ function custom_theme_options() {
 			'desc'		=> 'Comments on pages',
 			'std'		=> 'off',
 			'type'		=> 'on-off',
-			'section'	=> 'general'
+			'section'	=> 'general',
 		),
 		// General: Recommended Plugins
 		array(
@@ -153,7 +155,7 @@ function custom_theme_options() {
 			'desc'		=> 'Enable or disable the recommended plugins notice',
 			'std'		=> 'on',
 			'type'		=> 'on-off',
-			'section'	=> 'general'
+			'section'	=> 'general',
 		),
 		// Blog: Read More
 		array(
@@ -167,17 +169,17 @@ function custom_theme_options() {
 			'choices'	=> array(
 				array(
 					'value' => 'button',
-					'label' => 'Button'
+					'label' => 'Button',
 				),
 				array(
 					'value' => '...',
-					'label' => '...'
+					'label' => '...',
 				),
 				array(
 					'value' => 'link',
-					'label' => 'Link'
+					'label' => 'Link',
 				),
-			)
+			),
 
 		),
 
@@ -189,7 +191,7 @@ function custom_theme_options() {
 			'std'			=> '155',
 			'type'			=> 'numeric-slider',
 			'section'		=> 'blog',
-			'min_max_step'	=> '0,400,1'
+			'min_max_step'	=> '0,400,1',
 		),
 		// Blog: Columns 1 or 2 or 3
 		array(
@@ -202,17 +204,17 @@ function custom_theme_options() {
 			'choices'	=> array(
 				array(
 					'value' => '1',
-					'label' => 'One columns'
+					'label' => 'One columns',
 				),
 				array(
 					'value' => '2',
-					'label' => 'Two columns'
+					'label' => 'Two columns',
 				),
 				array(
 					'value' => '3',
-					'label' => 'Three columns'
+					'label' => 'Three columns',
 				),
-			)
+			),
 		),
 		// Blog: Thumbnail Placeholder
 		array(
@@ -221,7 +223,7 @@ function custom_theme_options() {
 			'desc'		=> 'Show featured image placeholders if no featured image is set',
 			'std'		=> 'on',
 			'type'		=> 'on-off',
-			'section'	=> 'blog'
+			'section'	=> 'blog',
 		),
 		// Blog: Single - Sharrre
 		array(
@@ -230,7 +232,7 @@ function custom_theme_options() {
 			'desc'		=> 'Social sharing buttons for each article',
 			'std'		=> 'on',
 			'type'		=> 'on-off',
-			'section'	=> 'blog'
+			'section'	=> 'blog',
 		),
 		// Blog: Twitter Username
 		array(
@@ -238,7 +240,7 @@ function custom_theme_options() {
 			'label'		=> 'Twitter Username',
 			'desc'		=> 'Your @username will be added to share-tweets of your posts (optional)',
 			'type'		=> 'text',
-			'section'	=> 'blog'
+			'section'	=> 'blog',
 		),
 		array(
 			'id'		=> 'related-posts',
@@ -250,17 +252,17 @@ function custom_theme_options() {
 			'choices'	=> array(
 				array(
 					'value' => '1',
-					'label' => 'Disable'
+					'label' => 'Disable',
 				),
 				array(
 					'value' => 'categories',
-					'label' => 'Related by categories'
+					'label' => 'Related by categories',
 				),
 				array(
 					'value' => 'tags',
-					'label' => 'Related by tags'
-				)
-			)
+					'label' => 'Related by tags',
+				),
+			),
 		),
 		// Blog: Single - Authorbox
 		array(
@@ -269,7 +271,7 @@ function custom_theme_options() {
 			'desc'		=> 'Shows post author description, if it exists',
 			'std'		=> 'off',
 			'type'		=> 'on-off',
-			'section'	=> 'blog'
+			'section'	=> 'blog',
 		),
 		// Header: Style
 		array(
@@ -283,9 +285,9 @@ function custom_theme_options() {
 				array(
 					'value'		=> 'style1',
 					'label'		=> 'Style 1',
-					'src'		=> get_template_directory_uri() . '/functions/images/header-style1.png'
+					'src'		=> get_template_directory_uri() . '/functions/images/header-style1.png',
 				),
-			)
+			),
 		),
 		// Header: Ads
 		array(
@@ -294,7 +296,7 @@ function custom_theme_options() {
 			'desc'		=> 'Header widget area',
 			'std'		=> 'off',
 			'type'		=> 'on-off',
-			'section'	=> 'header'
+			'section'	=> 'header',
 		),
 		// Header: Nav Menu
 		array(
@@ -303,7 +305,7 @@ function custom_theme_options() {
 			'desc'		=> 'ON - Full Width Nav Menu / OFF Block Width Nav Menu',
 			'std'		=> 'on',
 			'type'		=> 'on-off',
-			'section'	=> 'header'
+			'section'	=> 'header',
 		),
 		// Header: Custom Logo
 		array(
@@ -311,7 +313,7 @@ function custom_theme_options() {
 			'label'		=> 'Custom Logo',
 			'desc'		=> 'Upload your custom logo image. Set logo max-height in styling options.',
 			'type'		=> 'upload',
-			'section'	=> 'header'
+			'section'	=> 'header',
 		),
 		// Header: Site Description
 		array(
@@ -320,7 +322,7 @@ function custom_theme_options() {
 			'desc'		=> 'The description that appears next to your logo',
 			'std'		=> 'off',
 			'type'		=> 'on-off',
-			'section'	=> 'header'
+			'section'	=> 'header',
 		),
 		// Header: Header Image
 		array(
@@ -328,23 +330,33 @@ function custom_theme_options() {
 			'label'		=> 'Header Image',
 			'desc'		=> 'Upload a header image. This will disable header title/logo and description.',
 			'type'		=> 'upload',
-			'section'	=> 'header'
+			'section'	=> 'header',
 		),
 		// Footer: Style
 		array(
 			'id'		=> 'footer-style',
 			'label'		=> 'Style for footer',
 			'desc'		=> 'Style for footer',
-			'std'		=> 'style1',
+			'std'		=> 'footer-style-3',
 			'type'		=> 'radio-image',
 			'section'	=> 'footer',
 			'choices'	=> array(
 				array(
-					'value'		=> 'style1',
+					'value'		=> 'footer-style-1',
 					'label'		=> 'Style 1',
-					'src'		=> get_template_directory_uri() . '/functions/images/footer-style1.png'
+					'src'		=> get_template_directory_uri() . '/functions/images/footer-style1.png',
 				),
-			)
+				array(
+					'value'		=> 'footer-style-2',
+					'label'		=> 'Style 2',
+					'src'		=> get_template_directory_uri() . '/functions/images/footer-style2.png',
+				),
+				array(
+					'value'		=> 'footer-style-3',
+					'label'		=> 'Style 3',
+					'src'		=> get_template_directory_uri() . '/functions/images/footer-style3.png',
+				),
+			),
 		),
 
 		// Footer: Ads
@@ -354,7 +366,7 @@ function custom_theme_options() {
 			'desc'		=> 'Footer widget ads area',
 			'std'		=> 'off',
 			'type'		=> 'on-off',
-			'section'	=> 'footer'
+			'section'	=> 'footer',
 		),
 		array(
 			'id'		=> 'footer-ads-sidebar',
@@ -363,50 +375,13 @@ function custom_theme_options() {
 			'section'	=> 'footer',
 			'condition'   => 'footer-ads:is(on)',
 		),
-		// Footer: Widget Columns
-		array(
-			'id'		=> 'footer-widgets',
-			'label'		=> 'Footer Widget Columns',
-			'desc'		=> 'Select columns to enable footer widgets<br /><i>Recommended number: 3</i>',
-			'std'		=> '3',
-			'type'		=> 'radio-image',
-			'section'	=> 'footer',
-			'class'		=> '',
-			'choices'	=> array(
-				array(
-					'value'		=> '0',
-					'label'		=> 'Disable',
-					'src'		=> get_template_directory_uri() . '/functions/images/layout-off.png'
-				),
-				array(
-					'value'		=> '1',
-					'label'		=> '1 Column',
-					'src'		=> get_template_directory_uri() . '/functions/images/footer-widgets-1.png'
-				),
-				array(
-					'value'		=> '2',
-					'label'		=> '2 Columns',
-					'src'		=> get_template_directory_uri() . '/functions/images/footer-widgets-2.png'
-				),
-				array(
-					'value'		=> '3',
-					'label'		=> '3 Columns',
-					'src'		=> get_template_directory_uri() . '/functions/images/footer-widgets-3.png'
-				),
-				array(
-					'value'		=> '4',
-					'label'		=> '4 Columns',
-					'src'		=> get_template_directory_uri() . '/functions/images/footer-widgets-4.png'
-				)
-			)
-		),
 		// Footer: Custom Logo
 		array(
 			'id'		=> 'footer-logo',
 			'label'		=> 'Footer Logo',
 			'desc'		=> 'Upload your custom logo image',
 			'type'		=> 'upload',
-			'section'	=> 'footer'
+			'section'	=> 'footer',
 		),
 		// Footer: Copyright
 		array(
@@ -414,7 +389,7 @@ function custom_theme_options() {
 			'label'		=> 'Footer Copyright',
 			'desc'		=> 'Replace the footer copyright text',
 			'type'		=> 'text',
-			'section'	=> 'footer'
+			'section'	=> 'footer',
 		),
 		// Footer: Footer text
 		array(
@@ -422,7 +397,7 @@ function custom_theme_options() {
 			'label'		=> 'Footer text',
 			'desc'		=> '',
 			'type'		=> 'textarea',
-			'section'	=> 'footer'
+			'section'	=> 'footer',
 		),
 		// Footer: Credit
 		array(
@@ -431,7 +406,7 @@ function custom_theme_options() {
 			'desc'		=> 'Footer credit text',
 			'std'		=> 'on',
 			'type'		=> 'on-off',
-			'section'	=> 'footer'
+			'section'	=> 'footer',
 		),
 		// Layout : Global
 		array(
@@ -445,19 +420,19 @@ function custom_theme_options() {
 				array(
 					'value'		=> 'col-1c',
 					'label'		=> '1 Column',
-					'src'		=> get_template_directory_uri() . '/functions/images/col-1c.png'
+					'src'		=> get_template_directory_uri() . '/functions/images/col-1c.png',
 				),
 				array(
 					'value'		=> 'col-2cl',
 					'label'		=> '2 Column Left',
-					'src'		=> get_template_directory_uri() . '/functions/images/col-2cl.png'
+					'src'		=> get_template_directory_uri() . '/functions/images/col-2cl.png',
 				),
 				array(
 					'value'		=> 'col-2cr',
 					'label'		=> '2 Column Right',
-					'src'		=> get_template_directory_uri() . '/functions/images/col-2cr.png'
+					'src'		=> get_template_directory_uri() . '/functions/images/col-2cr.png',
 				),
-			)
+			),
 		),
 		// Layout : Home
 		array(
@@ -471,24 +446,24 @@ function custom_theme_options() {
 				array(
 					'value'		=> 'inherit',
 					'label'		=> 'Inherit Global Layout',
-					'src'		=> get_template_directory_uri() . '/functions/images/layout-off.png'
+					'src'		=> get_template_directory_uri() . '/functions/images/layout-off.png',
 				),
 				array(
 					'value'		=> 'col-1c',
 					'label'		=> '1 Column',
-					'src'		=> get_template_directory_uri() . '/functions/images/col-1c.png'
+					'src'		=> get_template_directory_uri() . '/functions/images/col-1c.png',
 				),
 				array(
 					'value'		=> 'col-2cl',
 					'label'		=> '2 Column Left',
-					'src'		=> get_template_directory_uri() . '/functions/images/col-2cl.png'
+					'src'		=> get_template_directory_uri() . '/functions/images/col-2cl.png',
 				),
 				array(
 					'value'		=> 'col-2cr',
 					'label'		=> '2 Column Right',
-					'src'		=> get_template_directory_uri() . '/functions/images/col-2cr.png'
+					'src'		=> get_template_directory_uri() . '/functions/images/col-2cr.png',
 				),
-			)
+			),
 		),
 		// Layout : Single
 		array(
@@ -502,24 +477,24 @@ function custom_theme_options() {
 				array(
 					'value'		=> 'inherit',
 					'label'		=> 'Inherit Global Layout',
-					'src'		=> get_template_directory_uri() . '/functions/images/layout-off.png'
+					'src'		=> get_template_directory_uri() . '/functions/images/layout-off.png',
 				),
 				array(
 					'value'		=> 'col-1c',
 					'label'		=> '1 Column',
-					'src'		=> get_template_directory_uri() . '/functions/images/col-1c.png'
+					'src'		=> get_template_directory_uri() . '/functions/images/col-1c.png',
 				),
 				array(
 					'value'		=> 'col-2cl',
 					'label'		=> '2 Column Left',
-					'src'		=> get_template_directory_uri() . '/functions/images/col-2cl.png'
+					'src'		=> get_template_directory_uri() . '/functions/images/col-2cl.png',
 				),
 				array(
 					'value'		=> 'col-2cr',
 					'label'		=> '2 Column Right',
-					'src'		=> get_template_directory_uri() . '/functions/images/col-2cr.png'
+					'src'		=> get_template_directory_uri() . '/functions/images/col-2cr.png',
 				),
-			)
+			),
 		),
 		// Layout : Archive
 		array(
@@ -533,24 +508,24 @@ function custom_theme_options() {
 				array(
 					'value'		=> 'inherit',
 					'label'		=> 'Inherit Global Layout',
-					'src'		=> get_template_directory_uri() . '/functions/images/layout-off.png'
+					'src'		=> get_template_directory_uri() . '/functions/images/layout-off.png',
 				),
 				array(
 					'value'		=> 'col-1c',
 					'label'		=> '1 Column',
-					'src'		=> get_template_directory_uri() . '/functions/images/col-1c.png'
+					'src'		=> get_template_directory_uri() . '/functions/images/col-1c.png',
 				),
 				array(
 					'value'		=> 'col-2cl',
 					'label'		=> '2 Column Left',
-					'src'		=> get_template_directory_uri() . '/functions/images/col-2cl.png'
+					'src'		=> get_template_directory_uri() . '/functions/images/col-2cl.png',
 				),
 				array(
 					'value'		=> 'col-2cr',
 					'label'		=> '2 Column Right',
-					'src'		=> get_template_directory_uri() . '/functions/images/col-2cr.png'
+					'src'		=> get_template_directory_uri() . '/functions/images/col-2cr.png',
 				),
-			)
+			),
 		),
 		// Layout : Archive - Category
 		array(
@@ -564,24 +539,24 @@ function custom_theme_options() {
 				array(
 					'value'		=> 'inherit',
 					'label'		=> 'Inherit Global Layout',
-					'src'		=> get_template_directory_uri() . '/functions/images/layout-off.png'
+					'src'		=> get_template_directory_uri() . '/functions/images/layout-off.png',
 				),
 				array(
 					'value'		=> 'col-1c',
 					'label'		=> '1 Column',
-					'src'		=> get_template_directory_uri() . '/functions/images/col-1c.png'
+					'src'		=> get_template_directory_uri() . '/functions/images/col-1c.png',
 				),
 				array(
 					'value'		=> 'col-2cl',
 					'label'		=> '2 Column Left',
-					'src'		=> get_template_directory_uri() . '/functions/images/col-2cl.png'
+					'src'		=> get_template_directory_uri() . '/functions/images/col-2cl.png',
 				),
 				array(
 					'value'		=> 'col-2cr',
 					'label'		=> '2 Column Right',
-					'src'		=> get_template_directory_uri() . '/functions/images/col-2cr.png'
+					'src'		=> get_template_directory_uri() . '/functions/images/col-2cr.png',
 				),
-			)
+			),
 		),
 		// Layout : Search
 		array(
@@ -595,24 +570,24 @@ function custom_theme_options() {
 				array(
 					'value'		=> 'inherit',
 					'label'		=> 'Inherit Global Layout',
-					'src'		=> get_template_directory_uri() . '/functions/images/layout-off.png'
+					'src'		=> get_template_directory_uri() . '/functions/images/layout-off.png',
 				),
 				array(
 					'value'		=> 'col-1c',
 					'label'		=> '1 Column',
-					'src'		=> get_template_directory_uri() . '/functions/images/col-1c.png'
+					'src'		=> get_template_directory_uri() . '/functions/images/col-1c.png',
 				),
 				array(
 					'value'		=> 'col-2cl',
 					'label'		=> '2 Column Left',
-					'src'		=> get_template_directory_uri() . '/functions/images/col-2cl.png'
+					'src'		=> get_template_directory_uri() . '/functions/images/col-2cl.png',
 				),
 				array(
 					'value'		=> 'col-2cr',
 					'label'		=> '2 Column Right',
-					'src'		=> get_template_directory_uri() . '/functions/images/col-2cr.png'
+					'src'		=> get_template_directory_uri() . '/functions/images/col-2cr.png',
 				),
-			)
+			),
 		),
 		// Layout : Error 404
 		array(
@@ -626,24 +601,24 @@ function custom_theme_options() {
 				array(
 					'value'		=> 'inherit',
 					'label'		=> 'Inherit Global Layout',
-					'src'		=> get_template_directory_uri() . '/functions/images/layout-off.png'
+					'src'		=> get_template_directory_uri() . '/functions/images/layout-off.png',
 				),
 				array(
 					'value'		=> 'col-1c',
 					'label'		=> '1 Column',
-					'src'		=> get_template_directory_uri() . '/functions/images/col-1c.png'
+					'src'		=> get_template_directory_uri() . '/functions/images/col-1c.png',
 				),
 				array(
 					'value'		=> 'col-2cl',
 					'label'		=> '2 Column Left',
-					'src'		=> get_template_directory_uri() . '/functions/images/col-2cl.png'
+					'src'		=> get_template_directory_uri() . '/functions/images/col-2cl.png',
 				),
 				array(
 					'value'		=> 'col-2cr',
 					'label'		=> '2 Column Right',
-					'src'		=> get_template_directory_uri() . '/functions/images/col-2cr.png'
+					'src'		=> get_template_directory_uri() . '/functions/images/col-2cr.png',
 				),
-			)
+			),
 		),
 		// Layout : Default Page
 		array(
@@ -657,24 +632,24 @@ function custom_theme_options() {
 				array(
 					'value'		=> 'inherit',
 					'label'		=> 'Inherit Global Layout',
-					'src'		=> get_template_directory_uri() . '/functions/images/layout-off.png'
+					'src'		=> get_template_directory_uri() . '/functions/images/layout-off.png',
 				),
 				array(
 					'value'		=> 'col-1c',
 					'label'		=> '1 Column',
-					'src'		=> get_template_directory_uri() . '/functions/images/col-1c.png'
+					'src'		=> get_template_directory_uri() . '/functions/images/col-1c.png',
 				),
 				array(
 					'value'		=> 'col-2cl',
 					'label'		=> '2 Column Left',
-					'src'		=> get_template_directory_uri() . '/functions/images/col-2cl.png'
+					'src'		=> get_template_directory_uri() . '/functions/images/col-2cl.png',
 				),
 				array(
 					'value'		=> 'col-2cr',
 					'label'		=> '2 Column Right',
-					'src'		=> get_template_directory_uri() . '/functions/images/col-2cr.png'
+					'src'		=> get_template_directory_uri() . '/functions/images/col-2cr.png',
 				),
-			)
+			),
 		),
 		// Layout : Portfolio
 		array(
@@ -688,24 +663,24 @@ function custom_theme_options() {
 				array(
 					'value'		=> 'inherit',
 					'label'		=> 'Inherit Global Layout',
-					'src'		=> get_template_directory_uri() . '/functions/images/layout-off.png'
+					'src'		=> get_template_directory_uri() . '/functions/images/layout-off.png',
 				),
 				array(
 					'value'		=> 'col-1c',
 					'label'		=> '1 Column',
-					'src'		=> get_template_directory_uri() . '/functions/images/col-1c.png'
+					'src'		=> get_template_directory_uri() . '/functions/images/col-1c.png',
 				),
 				array(
 					'value'		=> 'col-2cl',
 					'label'		=> '2 Column Left',
-					'src'		=> get_template_directory_uri() . '/functions/images/col-2cl.png'
+					'src'		=> get_template_directory_uri() . '/functions/images/col-2cl.png',
 				),
 				array(
 					'value'		=> 'col-2cr',
 					'label'		=> '2 Column Right',
-					'src'		=> get_template_directory_uri() . '/functions/images/col-2cr.png'
+					'src'		=> get_template_directory_uri() . '/functions/images/col-2cr.png',
 				),
-			)
+			),
 		),
 
 		// Sidebars: Create Areas
@@ -723,9 +698,9 @@ function custom_theme_options() {
 					'desc'		=> 'This ID must be unique, for example "sidebar-about"',
 					'std'		=> 'sidebar-',
 					'type'		=> 'text',
-					'choices'	=> array()
-				)
-			)
+					'choices'	=> array(),
+				),
+			),
 		),
 		array(
 			'id'		=> 'sidebar-width',
@@ -751,91 +726,91 @@ function custom_theme_options() {
 			'label'		=> 'Home',
 			'desc'		=> '[ <strong>is_home</strong> ] Primary',
 			'type'		=> 'sidebar-select',
-			'section'	=> 'sidebars'
+			'section'	=> 'sidebars',
 		),
 		array(
 			'id'		=> 's2-home',
 			'label'		=> 'Home',
 			'desc'		=> '[ <strong>is_home</strong> ] Secondary',
 			'type'		=> 'sidebar-select',
-			'section'	=> 'sidebars'
+			'section'	=> 'sidebars',
 		),
 		array(
 			'id'		=> 's1-single',
 			'label'		=> 'Single',
 			'desc'		=> '[ <strong>is_single</strong> ] Primary - If a single post has a unique sidebar, it will override this.',
 			'type'		=> 'sidebar-select',
-			'section'	=> 'sidebars'
+			'section'	=> 'sidebars',
 		),
 		array(
 			'id'		=> 's2-single',
 			'label'		=> 'Single',
 			'desc'		=> '[ <strong>is_single</strong> ] Secondary - If a single post has a unique sidebar, it will override this.',
 			'type'		=> 'sidebar-select',
-			'section'	=> 'sidebars'
+			'section'	=> 'sidebars',
 		),
 		array(
 			'id'		=> 's1-archive',
 			'label'		=> 'Archive',
 			'desc'		=> '[ <strong>is_archive</strong> ] Primary',
 			'type'		=> 'sidebar-select',
-			'section'	=> 'sidebars'
+			'section'	=> 'sidebars',
 		),
 		array(
 			'id'		=> 's2-archive',
 			'label'		=> 'Archive',
 			'desc'		=> '[ <strong>is_archive</strong> ] Secondary',
 			'type'		=> 'sidebar-select',
-			'section'	=> 'sidebars'
+			'section'	=> 'sidebars',
 		),
 		array(
 			'id'		=> 's1-archive-category',
 			'label'		=> 'Archive &mdash; Category',
 			'desc'		=> '[ <strong>is_category</strong> ] Primary',
 			'type'		=> 'sidebar-select',
-			'section'	=> 'sidebars'
+			'section'	=> 'sidebars',
 		),
 		array(
 			'id'		=> 's2-archive-category',
 			'label'		=> 'Archive &mdash; Category',
 			'desc'		=> '[ <strong>is_category</strong> ] Secondary',
 			'type'		=> 'sidebar-select',
-			'section'	=> 'sidebars'
+			'section'	=> 'sidebars',
 		),
 		array(
 			'id'		=> 's1-search',
 			'label'		=> 'Search',
 			'desc'		=> '[ <strong>is_search</strong> ] Primary',
 			'type'		=> 'sidebar-select',
-			'section'	=> 'sidebars'
+			'section'	=> 'sidebars',
 		),
 		array(
 			'id'		=> 's2-search',
 			'label'		=> 'Search',
 			'desc'		=> '[ <strong>is_search</strong> ] Secondary',
 			'type'		=> 'sidebar-select',
-			'section'	=> 'sidebars'
+			'section'	=> 'sidebars',
 		),
 		array(
 			'id'		=> 's1-404',
 			'label'		=> 'Error 404',
 			'desc'		=> '[ <strong>is_404</strong> ] Primary',
 			'type'		=> 'sidebar-select',
-			'section'	=> 'sidebars'
+			'section'	=> 'sidebars',
 		),
 		array(
 			'id'		=> 's2-404',
 			'label'		=> 'Error 404',
 			'desc'		=> '[ <strong>is_404</strong> ] Secondary',
 			'type'		=> 'sidebar-select',
-			'section'	=> 'sidebars'
+			'section'	=> 'sidebars',
 		),
 		array(
 			'id'		=> 's1-page',
 			'label'		=> 'Default Page',
 			'desc'		=> '[ <strong>is_page</strong> ] Primary - If a page has a unique sidebar, it will override this.',
 			'type'		=> 'sidebar-select',
-			'section'	=> 'sidebars'
+			'section'	=> 'sidebars',
 		),
 		array(
 			'id'		=> 's2-page',
@@ -860,7 +835,7 @@ function custom_theme_options() {
 					'desc'		=> 'Font Awesome icon names [<a href="http://fortawesome.github.io/Font-Awesome/icons/" target="_blank"><strong>View all</strong>]</a>  ',
 					'std'		=> 'icon-',
 					'type'		=> 'text',
-					'choices'	=> array()
+					'choices'	=> array(),
 				),
 				array(
 					'id'		=> 'social-link',
@@ -868,7 +843,7 @@ function custom_theme_options() {
 					'desc'		=> 'Enter the full url for your icon button',
 					'std'		=> 'http://',
 					'type'		=> 'text',
-					'choices'	=> array()
+					'choices'	=> array(),
 				),
 				array(
 					'id'		=> 'social-color',
@@ -886,13 +861,12 @@ function custom_theme_options() {
 					'choices'	=> array(
 						array(
 							'value' => '_blank',
-							'label' => 'Open in new window'
-						)
-					)
-				)
-			)
+							'label' => 'Open in new window',
+						),
+					),
+				),
+			),
 		),
-
 
 		// Styling: Enable
 		array(
@@ -901,7 +875,7 @@ function custom_theme_options() {
 			'desc'		=> 'Turn on to use the styling options below',
 			'std'		=> 'on',
 			'type'		=> 'on-off',
-			'section'	=> 'styling'
+			'section'	=> 'styling',
 		),
 		// Styling: Container Width
 		array(
@@ -911,7 +885,7 @@ function custom_theme_options() {
 			'std'			=> '1200',
 			'type'			=> 'numeric-slider',
 			'section'		=> 'styling',
-			'min_max_step'	=> '990,1600,10'
+			'min_max_step'	=> '990,1600,10',
 		),
 		// Styling: Featured Image
 		array(
@@ -920,7 +894,7 @@ function custom_theme_options() {
 			'desc'		=> 'Show featured image on single posts',
 			'type'		=> 'on-off',
 			'section'	=> 'styling',
-			'std'		=> 'on'
+			'std'		=> 'on',
 		),
 		// Styling: Boxed Layout
 		array(
@@ -929,7 +903,7 @@ function custom_theme_options() {
 			'desc'		=> 'Use a boxed layout',
 			'std'		=> 'off',
 			'type'		=> 'on-off',
-			'section'	=> 'styling'
+			'section'	=> 'styling',
 		),
 		// Styling: Image Border Radius
 		array(
@@ -939,7 +913,7 @@ function custom_theme_options() {
 			'std'			=> '0',
 			'type'			=> 'numeric-slider',
 			'section'		=> 'styling',
-			'min_max_step'	=> '0,15,1'
+			'min_max_step'	=> '0,15,1',
 		),
 
 		// Fonts:
@@ -950,7 +924,7 @@ function custom_theme_options() {
 			'type'		=> 'select',
 			'std'		=> 'play',
 			'section'	=> 'fonts',
-			'choices'	=> $gfont->get_google_fonts_names() //(array)asdb_fgonts('type=adm'),
+			'choices'	=> $gfont->get_google_fonts_names(),// (array)asdb_fgonts('type=adm'),
 		),
 
 		array(
@@ -960,7 +934,7 @@ function custom_theme_options() {
 			'type'		=> 'select',
 			'std'		=> 'cuprum',
 			'section'	=> 'fonts',
-			'choices'	=> $gfont->get_google_fonts_names() //(array)asdb_fgonts('type=adm'),
+			'choices'	=> $gfont->get_google_fonts_names(),// (array)asdb_fgonts('type=adm'),
 		),
 		array(
 			'id'		=> 'font-body',
@@ -969,81 +943,81 @@ function custom_theme_options() {
 			'type'		=> 'select',
 			'std'		=> 'open-sans',
 			'section'	=> 'fonts',
-			'choices'	=> $gfont->get_google_fonts_names() //(array)asdb_fgonts('type=adm'),
+			'choices'	=> $gfont->get_google_fonts_names(),// (array)asdb_fgonts('type=adm'),
 		),
 		array(
 			'id'		=> 'font-subset',
 			'label'		=> 'Font Subset',
 			'desc'		=> '',
 			'type'		=> 'checkbox',
-			'std'		=> array(2=>'cyrillic', 10=> 'latin'),
+			'std'		=> array( 2 => 'cyrillic', 10 => 'latin' ),
 			'section'	=> 'fonts',
-			'choices'	=> array (
+			'choices'	=> array(
 	            array(
 	            'label' => __( 'Arabic', 'asdbturbo' ),
 	            'value' => 'arabic',
 	            ),
 	            array(
 	            'label' => __( 'Bengali', 'asdbturbo' ),
-    	        'value' => 'bengali',
-    	        ),
+		        'value' => 'bengali',
+		        ),
 	            array(
 	            'label' => __( 'Cyrillic', 'asdbturbo' ),
-        	    'value' => 'cyrillic',
-        	    ),
+			    'value' => 'cyrillic',
+			    ),
 	            array(
 	            'label' => __( 'Cyrillic Ext', 'asdbturbo' ),
-            	'value' => 'cyrillic-ext',
-            	),
+				'value' => 'cyrillic-ext',
+				),
 	            array(
 	            'label' => __( 'Devanagari', 'asdbturbo' ),
-            	'value' => 'devanagari',
-            	),
+				'value' => 'devanagari',
+				),
 	            array(
 	            'label' => __( 'Greek', 'asdbturbo' ),
-            	'value' => 'greek',
-            	),
+				'value' => 'greek',
+				),
 	            array(
 	            'label' => __( 'Greek Ext', 'asdbturbo' ),
-            	'value' => 'greek-ext',
-            	),
+				'value' => 'greek-ext',
+				),
 	            array(
 	            'label' => __( 'Gujarati', 'asdbturbo' ),
-            	'value' => 'gujarati',
-            	),
+				'value' => 'gujarati',
+				),
 	            array(
 	            'label' => __( 'Hebrew', 'asdbturbo' ),
-            	'value' => 'hebrew',
-            	),
+				'value' => 'hebrew',
+				),
 	            array(
 	            'label' => __( 'Khmer', 'asdbturbo' ),
-            	'value' => 'khmer',
-            	),
+				'value' => 'khmer',
+				),
 	            array(
 	            'label' => __( 'Latin', 'asdbturbo' ),
-            	'value' => 'latin',
-            	),
+				'value' => 'latin',
+				),
 	            array(
 	            'label' => __( 'Latin Ext', 'asdbturbo' ),
-            	'value' => 'latin-ext',
-            	),
+				'value' => 'latin-ext',
+				),
 	            array(
 	            'label' => __( 'Tamil', 'asdbturbo' ),
-            	'value' => 'tamil',
-            	),
+				'value' => 'tamil',
+				),
 	            array(
 	            'label' => __( 'Telugu', 'asdbturbo' ),
-            	'value' => 'telugu',
-            	),
+				'value' => 'telugu',
+				),
 	            array(
 	            'label' => __( 'Thai', 'asdbturbo' ),
-            	'value' => 'thai',
-            	),
+				'value' => 'thai',
+				),
 	            array(
 	            'label' => __( 'Vietnamese', 'asdbturbo' ),
-            	'value' => 'vietnamese'
-            	),
-			)
+				'value' => 'vietnamese',
+				),
+			),
 		),
 
 		// Site Structure
@@ -1053,7 +1027,7 @@ function custom_theme_options() {
 			'desc'		=> 'Включить галлереи',
 			'type'		=> 'on-off',
 			'std'		=> 'off',
-			'section'	=> 'site'
+			'section'	=> 'site',
 		),
 		array(
 			'id'		=> 'site-features',
@@ -1061,7 +1035,7 @@ function custom_theme_options() {
 			'desc'		=> 'Включить Блоки',
 			'type'		=> 'on-off',
 			'std'		=> 'off',
-			'section'	=> 'site'
+			'section'	=> 'site',
 		),
 		array(
 			'id'		=> 'site-portfolio',
@@ -1069,7 +1043,7 @@ function custom_theme_options() {
 			'desc'		=> 'Включить портфолио',
 			'type'		=> 'on-off',
 			'std'		=> 'off',
-			'section'	=> 'site'
+			'section'	=> 'site',
 		),
 		array(
 			'id'		=> 'site-testimonials',
@@ -1077,7 +1051,7 @@ function custom_theme_options() {
 			'desc'		=> 'Включить отзывы',
 			'type'		=> 'on-off',
 			'std'		=> 'off',
-			'section'	=> 'site'
+			'section'	=> 'site',
 		),
 		array(
 			'id'		=> 'site-services',
@@ -1085,7 +1059,7 @@ function custom_theme_options() {
 			'desc'		=> 'Включить услуги',
 			'type'		=> 'on-off',
 			'std'		=> 'off',
-			'section'	=> 'site'
+			'section'	=> 'site',
 		),
 		array(
 			'id'		=> 'site-partners',
@@ -1094,7 +1068,7 @@ function custom_theme_options() {
 			'type'		=> 'on-off',
 			'std'		=> 'off',
 			'rows'        => '5',
-			'section'	=> 'site'
+			'section'	=> 'site',
 		),
 		array(
 			'id'		=> 'site-team',
@@ -1103,7 +1077,7 @@ function custom_theme_options() {
 			'type'		=> 'on-off',
 			'std'		=> 'off',
 			'rows'        => '1',
-			'section'	=> 'site'
+			'section'	=> 'site',
 		),
 		array(
 			'id'		=> 'postviews',
@@ -1111,7 +1085,7 @@ function custom_theme_options() {
 			'desc'		=> '',
 			'type'		=> 'on-off',
 			'std'		=> 'off',
-			'section'	=> 'addons'
+			'section'	=> 'addons',
 		),
 		array(
 			'id'		=> 'who_count',
@@ -1123,22 +1097,22 @@ function custom_theme_options() {
 			'choices'	=> array(
 				array(
 					'value' => 'all',
-					'label' => 'All'
+					'label' => 'All',
 				),
 				array(
 					'value' => 'not_logged_users',
-					'label' => 'Not logged users'
+					'label' => 'Not logged users',
 				),
 				array(
 					'value' => 'logged_users',
-					'label' => 'Logged Users'
+					'label' => 'Logged Users',
 				),
 				array(
 					'value' => 'not_administrators',
-					'label' => 'Not Administrators'
-				)
+					'label' => 'Not Administrators',
+				),
 
-			)
+			),
 		),
 		array(
 			'id'		=> 'hold_sec',
@@ -1150,17 +1124,17 @@ function custom_theme_options() {
 			'choices'	=> array(
 				array(
 					'value' => '1',
-					'label' => '1'
+					'label' => '1',
 				),
 				array(
 					'value' => '2',
-					'label' => '2'
+					'label' => '2',
 				),
 				array(
 					'value' => '3',
-					'label' => '3'
+					'label' => '3',
 				),
-			)
+			),
 		),
 		array(
 			'id'		=> 'breadcrumbs',
@@ -1168,7 +1142,7 @@ function custom_theme_options() {
 			'desc'		=> '',
 			'type'		=> 'on-off',
 			'std'		=> 'off',
-			'section'	=> 'addons'
+			'section'	=> 'addons',
 		),
 		array(
 			'id'		=> 'crumbstype',
@@ -1181,17 +1155,17 @@ function custom_theme_options() {
 			'choices'	=> array(
 				array(
 					'value' => '1',
-					'label' => 'Embedded in Theme'
+					'label' => 'Embedded in Theme',
 				),
 				array(
 					'value' => '2',
-					'label' => 'Breadcrumb NavXT'
+					'label' => 'Breadcrumb NavXT',
 				),
 				array(
 					'value' => '3',
-					'label' => 'Yoast SEO Breadcrumb'
-				)
-			)
+					'label' => 'Yoast SEO Breadcrumb',
+				),
+			),
 		),
 		array(
 			'id'		=> 'hero',
@@ -1199,7 +1173,7 @@ function custom_theme_options() {
 			'desc'		=> '',
 			'type'		=> 'on-off',
 			'std'		=> 'off',
-			'section'	=> 'addons'
+			'section'	=> 'addons',
 		),
 		array(
 			'id'		=> 'mmenu',
@@ -1207,7 +1181,7 @@ function custom_theme_options() {
 			'desc'		=> '',
 			'type'		=> 'on-off',
 			'std'		=> 'off',
-			'section'	=> 'addons'
+			'section'	=> 'addons',
 		),
 		array(
 			'id'		=> 'pbuilder',
@@ -1215,13 +1189,14 @@ function custom_theme_options() {
 			'desc'		=> '',
 			'type'		=> 'on-off',
 			'std'		=> 'off',
-			'section'	=> 'addons'
+			'section'	=> 'addons',
 		),
 
-	)
+	),
 );
 
-/*  Settings are not the same? Update the DB
+/*
+  Settings are not the same? Update the DB
 /* ------------------------------------ */
 	if ( $saved_settings !== $custom_settings ) {
 		update_option( 'option_tree_settings', $custom_settings );
@@ -1229,7 +1204,7 @@ function custom_theme_options() {
 }
 
 
-if ( ! function_exists('tax_theme') ) {
+if ( ! function_exists( 'tax_theme' ) ) {
 
 	function asdb_tax_opt( $args = '' ) {
 		$args = array(
@@ -1247,13 +1222,11 @@ if ( ! function_exists('tax_theme') ) {
 			'pad_counts'   => false,
 		);
 		$categories = get_categories( $args );
-			if( $categories ){
-				foreach( $categories as $cat ){
-			$out[] = array('title' => $cat->name, 'tax_ID' => $cat->cat_ID, 'tax_columns' => 0, 'tax_style' => 0, 'tax_slider' => 0, 'tax_bg' => '' );
+			if ( $categories ) {
+			foreach ( $categories as $cat ) {
+			$out[] = array( 'title' => $cat->name, 'tax_ID' => $cat->cat_ID, 'tax_columns' => 0, 'tax_style' => 0, 'tax_slider' => 0, 'tax_bg' => '' );
 			}
 		}
 	return $out;
 	}
-
 }
-

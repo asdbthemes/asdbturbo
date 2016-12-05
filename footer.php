@@ -13,19 +13,19 @@
 ?>
 
 	</div><!-- #content -->
-	<?php if ( function_exists('wds_page_builder_area') ): ?>
-		<?php wds_page_builder_area('footer'); ?>
+	<?php if ( function_exists( 'wds_page_builder_area' ) ) :  ?>
+		<?php wds_page_builder_area( 'footer' ); ?>
 	<?php endif; ?>
 	<footer id="footer" class="site-footer">
-			<?php if (ot_get_option('footer-ads')=='on' ) { get_template_part('parts/footer/footer-ads');} ?>
-			<?php get_template_part('parts/footer-style-1'); ?>
+			<?php if ( ot_get_option( 'footer-ads' ) == 'on' ) { get_template_part( 'parts/footer/footer-ads' );} ?>
+			<?php get_template_part( 'parts/'.ot_get_option( 'footer-style' ) ); ?>
 	</footer><!-- #footer -->
 
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
 
-<?php if ( ot_get_option('boxed') != 'off'): ?>
+<?php if ( ot_get_option( 'boxed' ) != 'off' ) : ?>
 </div><!--/#boxed-->
 <?php endif; ?>
 
