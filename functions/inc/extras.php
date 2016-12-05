@@ -387,11 +387,12 @@ if ( ! function_exists( 'asdb_page_title' ) ) {
 /*
    Social links
 /* ------------------------------------ */
-if ( ! function_exists( 'asdb_social_links' ) ) {
+if ( ! function_exists( 'wpb_social_links' ) ) {
 
-	function asdb_social_links() {
-		if ( ! ot_get_option('social-link') == '' ) {
-			$links = ot_get_option('social-link', array());
+	function wpb_social_links() {
+
+		if ( ! ot_get_option('social-links') == '' ) {
+			$links = ot_get_option('social-links', array());
 			if ( ! empty( $links ) ) {
 				echo '<ul class="social-links">';
 				foreach ( $links as $item ) {
@@ -415,8 +416,8 @@ if ( ! function_exists( 'asdb_social_links' ) ) {
 }
 
 
-if ( ! function_exists( 'asdb_share' ) ) {
-		function asdb_share() {
+if ( ! function_exists( 'wpb_share' ) ) {
+		function wpb_share() {
 	        global $post;
 	        $twitter_user = ot_get_option( 'twitter_username' );
 		    $out = '';

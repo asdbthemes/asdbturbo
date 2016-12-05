@@ -59,9 +59,9 @@ add_shortcode( 'asdb_blocknumber', function( $atts, $content="" ) {
  *				Social Icon Shortcodes
  *------------------------------------------------------------------*/
 
-add_shortcode('asdb_social','asdb_social_shortcode');
+add_shortcode('wpb_social','wpb_social_shortcode');
 
-function asdb_social_shortcode( $atts, $content = null ) {
+function wpb_social_shortcode( $atts, $content = null ) {
   $list_item = ot_get_option('social-links', array());
     if ( !empty( $list_item ) ) {
 	$output = '';

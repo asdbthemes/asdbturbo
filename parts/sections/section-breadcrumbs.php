@@ -20,7 +20,7 @@
             </div>
             <div class="social-warp medium-4 columns">
                 <span class="pull-right">
-          			<?php asdb_social_links(); ?>
+          			<?php wpb_social_links(); ?>
                 </span>
             </div>
         </div><!--/.row-->

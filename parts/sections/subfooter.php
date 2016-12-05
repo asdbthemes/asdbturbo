@@ -2,7 +2,7 @@
 
         <ul class="social-warp pull-center">
           <li>
-          <?php asdb_social_links(); ?>
+          <?php wpb_social_links(); ?>
           </li>
           <li class="pull-right">
             <a id="gototop" class="gototop" href="#"><i class="fa fa-chevron-up"></i></a><!--#gototop-->

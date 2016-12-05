@@ -29,7 +29,7 @@
 	</div><!--/.post-meta-->
 
         <?php if ( is_single() && (ot_get_option('sharrre') != 'off') ) :  ?>
-        <?php echo asdb_share(); ?>
+        <?php echo wpb_share(); ?>
         <?php endif; ?>
 
 	<div class="entry-content">
