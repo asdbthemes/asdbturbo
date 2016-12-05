@@ -672,3 +672,17 @@ function get_attachment_id_by_url( $url ) {
     return (int) $attachment_id;
 }
 */
+
+
+/*
+   Custom favicon
+/* ------------------------------------ */
+if ( ! function_exists( 'wpb_custom_favicon' ) ) {
+
+	function wpb_custom_favicon() {
+		if ( ot_get_option('favicon') ) {
+			echo '<link rel="shortcut icon" href="'.ot_get_option('favicon').'" />'."\n";
+		}
+	}
+}
+add_filter( 'wp_head', 'wpb_custom_favicon' );
