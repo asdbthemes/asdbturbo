@@ -12,29 +12,29 @@ if ( ! function_exists( 'asdb__posted_on' ) ) :
  * Prints HTML with meta information for the current post-date/time and author.
  */
 function asdb__posted_on() {
-	$time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
-	if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
-		$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time><time class="updated" datetime="%3$s">%4$s</time>';
-	}
+		$time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
+		if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
+			$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time><time class="updated" datetime="%3$s">%4$s</time>';
+			}
 
-	$time_string = sprintf( $time_string,
+		$time_string = sprintf( $time_string,
 		esc_attr( get_the_date( 'c' ) ),
 		esc_html( get_the_date() ),
 		esc_attr( get_the_modified_date( 'c' ) ),
 		esc_html( get_the_modified_date() )
-	);
+			);
 
-	$posted_on = sprintf(
-		esc_html_x( 'Posted on %s', 'post date', 'asdbturbo' ),
-		'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
-	);
+			$posted_on = sprintf(
+			esc_html_x( 'Posted on %s', 'post date', 'asdbturbo' ),
+			'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
+			);
 
-	$byline = sprintf(
-		esc_html_x( 'by %s', 'post author', 'asdbturbo' ),
-		'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
-	);
+			$byline = sprintf(
+			esc_html_x( 'by %s', 'post author', 'asdbturbo' ),
+			'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
+			);
 
-	echo '<span class="posted-on">' . $posted_on . '</span><span class="byline"> ' . $byline . '</span>'; // WPCS: XSS OK.
+			echo '<span class="posted-on">' . $posted_on . '</span><span class="byline"> ' . $byline . '</span>'; // WPCS: XSS OK.
 
 }
 endif;
@@ -44,28 +44,28 @@ if ( ! function_exists( 'asdb__entry_footer' ) ) :
  * Prints HTML with meta information for the categories, tags and comments.
  */
 function asdb__entry_footer() {
-	// Hide category and tag text for pages.
-	if ( 'post' === get_post_type() ) {
-		/* translators: used between list items, there is a space after the comma */
-		$categories_list = get_the_category_list( esc_html__( ', ', 'asdbturbo' ) );
-		if ( $categories_list && asdb__categorized_blog() ) {
-			printf( '<span class="cat-links">' . esc_html__( 'Posted in %1$s', 'asdbturbo' ) . '</span>', $categories_list ); // WPCS: XSS OK.
-		}
+		// Hide category and tag text for pages.
+		if ( 'post' === get_post_type() ) {
+			/* translators: used between list items, there is a space after the comma */
+			$categories_list = get_the_category_list( esc_html__( ', ', 'asdbturbo' ) );
+			if ( $categories_list && asdb__categorized_blog() ) {
+				printf( '<span class="cat-links">' . esc_html__( 'Posted in %1$s', 'asdbturbo' ) . '</span>', $categories_list ); // WPCS: XSS OK.
+			}
 
-		/* translators: used between list items, there is a space after the comma */
-		$tags_list = get_the_tag_list( '', esc_html__( ', ', 'asdbturbo' ) );
-		if ( $tags_list ) {
-			printf( '<span class="tags-links">' . esc_html__( 'Tagged %1$s', 'asdbturbo' ) . '</span>', $tags_list ); // WPCS: XSS OK.
-		}
-	}
+			/* translators: used between list items, there is a space after the comma */
+			$tags_list = get_the_tag_list( '', esc_html__( ', ', 'asdbturbo' ) );
+			if ( $tags_list ) {
+				printf( '<span class="tags-links">' . esc_html__( 'Tagged %1$s', 'asdbturbo' ) . '</span>', $tags_list ); // WPCS: XSS OK.
+			}
+			}
 
-	if ( ! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
-		echo '<span class="comments-link">';
-		comments_popup_link( esc_html__( 'Leave a comment', 'asdbturbo' ), esc_html__( '1 Comment', 'asdbturbo' ), esc_html__( '% Comments', 'asdbturbo' ) );
-		echo '</span>';
-	}
+		if ( ! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
+			echo '<span class="comments-link">';
+			comments_popup_link( esc_html__( 'Leave a comment', 'asdbturbo' ), esc_html__( '1 Comment', 'asdbturbo' ), esc_html__( '% Comments', 'asdbturbo' ) );
+			echo '</span>';
+			}
 
-	edit_post_link(
+		edit_post_link(
 		sprintf(
 			/* translators: %s: Name of current post */
 			esc_html__( 'Edit %s', 'asdbturbo' ),
@@ -73,7 +73,7 @@ function asdb__entry_footer() {
 		),
 		'<span class="edit-link">',
 		'</span>'
-	);
+			);
 }
 endif;
 
@@ -148,7 +148,7 @@ function asdb__get_svg( $args = array() ) {
 	$defaults = array(
 		'icon'  => '',
 		'title' => '',
-		'desc'  => ''
+		'desc'  => '',
 	);
 
 	// Parse args.
@@ -177,7 +177,7 @@ function asdb__get_svg( $args = array() ) {
 /**
  * Display an SVG.
  *
- * @param  array  $args  Parameters needed to display an SVG.
+ * @param  array $args  Parameters needed to display an SVG.
  */
 function asdb__do_svg( $args = array() ) {
 	echo asdb__get_svg( $args );
@@ -186,7 +186,7 @@ function asdb__do_svg( $args = array() ) {
 /**
  * Trim the title length.
  *
- * @param  array  $args  Parameters include length and more.
+ * @param  array $args  Parameters include length and more.
  * @return string        The shortened excerpt.
  */
 function asdb__get_the_title( $args = array() ) {
@@ -194,7 +194,7 @@ function asdb__get_the_title( $args = array() ) {
 	// Set defaults.
 	$defaults = array(
 		'length'  => 12,
-		'more'    => '...'
+		'more'    => '...',
 	);
 
 	// Parse args.
@@ -210,23 +210,21 @@ function asdb__get_the_title( $args = array() ) {
 function asdb__content_more_link() {
 	return ' <a class="more-link" href="' . get_permalink() . '">' . esc_html__( 'Read More', 'asdbturbo' ) . '...</a>';
 }
-//add_filter( 'the_content_more_link', 'asdb__content_more_link' );
-
+// add_filter( 'the_content_more_link', 'asdb__content_more_link' );
 /**
  * Customize the [...] on the_excerpt();
  *
- * @param string   $more     The current $more string.
+ * @param string $more     The current $more string.
  * @return string            Replace with "Read More..."
  */
 function asdb__excerpt_more( $more ) {
 	return sprintf( ' <a class="more-link" href="%1$s">%2$s</a>', get_permalink( get_the_ID() ), esc_html__( 'Read more...', 'asdbturbo' ) );
 }
-//add_filter( 'excerpt_more', 'asdb__excerpt_more' );
-
+// add_filter( 'excerpt_more', 'asdb__excerpt_more' );
 /**
  * Limit the excerpt length.
  *
- * @param  array  $args  Parameters include length and more.
+ * @param  array $args  Parameters include length and more.
  * @return string        The shortened excerpt.
  */
 function asdb__get_the_excerpt( $args = array() ) {
@@ -234,7 +232,7 @@ function asdb__get_the_excerpt( $args = array() ) {
 	// Set defaults.
 	$defaults = array(
 		'length' => 20,
-		'more'   => '...'
+		'more'   => '...',
 	);
 
 	// Parse args.
@@ -247,7 +245,7 @@ function asdb__get_the_excerpt( $args = array() ) {
 /**
  * Echo an image, no matter what.
  *
- * @param string  $size  The image size you want to display.
+ * @param string $size  The image size you want to display.
  */
 function asdb__do_post_image( $size = 'thumbnail' ) {
 
@@ -268,13 +266,13 @@ function asdb__do_post_image( $size = 'thumbnail' ) {
 		$media_url = ( 'thumbnail' === $size ) ? wp_get_attachment_thumb_url( $media->ID ) : wp_get_attachment_url( $media->ID );
 	}
 
-	echo '<img src="' . esc_url( $media_url ) . '" class="attachment-thumbnail wp-post-image" alt="' . esc_html( get_the_title() )  . '" />';
+	echo '<img src="' . esc_url( $media_url ) . '" class="attachment-thumbnail wp-post-image" alt="' . esc_html( get_the_title() ) . '" />';
 }
 
 /**
  * Return an image URI, no matter what.
  *
- * @param  string  $size  The image size you want to return.
+ * @param  string $size  The image size you want to return.
  * @return string         The image URI.
  */
 function asdb__get_post_image_uri( $size = 'thumbnail' ) {
@@ -308,7 +306,7 @@ function asdb__get_post_image_uri( $size = 'thumbnail' ) {
 /**
  * Get an attachment ID from it's URL.
  *
- * @param  string  $attachment_url  The URL of the attachment.
+ * @param  string $attachment_url  The URL of the attachment.
  * @return int                      The attachment ID.
  */
 function asdb__get_attachment_id_from_url( $attachment_url = '' ) {
@@ -367,9 +365,9 @@ function asdb__do_copyright_text() {
 function asdb__get_social_share() {
 
 	// Build the sharing URLs.
-	$twitter_url  = 'https://twitter.com/share?text=' . urlencode( html_entity_decode( get_the_title() ) ) . '&amp;url=' . rawurlencode ( get_the_permalink() );
-	$facebook_url = 'https://www.facebook.com/sharer/sharer.php?u=' . rawurlencode ( get_the_permalink() );
-	$linkedin_url = 'https://www.linkedin.com/shareArticle?title=' . urlencode( html_entity_decode( get_the_title() ) ) . '&amp;url=' . rawurlencode ( get_the_permalink() );
+	$twitter_url  = 'https://twitter.com/share?text=' . urlencode( html_entity_decode( get_the_title() ) ) . '&amp;url=' . rawurlencode( get_the_permalink() );
+	$facebook_url = 'https://www.facebook.com/sharer/sharer.php?u=' . rawurlencode( get_the_permalink() );
+	$linkedin_url = 'https://www.linkedin.com/shareArticle?title=' . urlencode( html_entity_decode( get_the_title() ) ) . '&amp;url=' . rawurlencode( get_the_permalink() );
 
 	// Start the markup.
 	ob_start(); ?>
@@ -399,7 +397,7 @@ function asdb__get_social_share() {
 
 	<?php
 	return ob_get_clean();
- }
+	}
 
 /**
  * Output the mobile navigation
@@ -409,6 +407,11 @@ function asdb__do_mobile_navigation_menu() {
 	// Figure out which menu we're pulling
 	$mobile_menu = has_nav_menu( 'mobile' ) ? 'mobile' : 'primary';
 	if ( wp_is_mobile() ) {
+
+    $walker_menu = '';
+	if (ot_get_option('mmenu')!='off'){
+	$walker_menu = new ASDB_Mega_Menu_Walker(); }
+
 	?>
 			<nav class="nav-container group" id="nav-topbar">
 				<div class="nav-toggle"><i class="fa fa-bars"></i></div>
@@ -416,11 +419,11 @@ function asdb__do_mobile_navigation_menu() {
 					<section class="site-branding-mobile">
 						<div class="site-logo">
 							<?php echo wpb_site_title(); ?>
-							<?php if ( ot_get_option('site-description') != 'off' ): ?><p class="site-description"><?php bloginfo( 'description' ); ?></p><?php endif; ?>
+							<?php if ( ot_get_option( 'site-description' ) != 'off' ) :  ?><p class="site-description"><?php bloginfo( 'description' ); ?></p><?php endif; ?>
 						</div>
 					</section>
 				</div>
-				<div class="nav-wrap container"><?php wp_nav_menu(array('theme_location'=>$mobile_menu,'menu_class'=>'nav container-inner group','container'=>'','menu_id' => '','fallback_cb'=> false, 'walker'=>new ASDB_Mega_Menu_Walker())  ); ?></div>
+				<div class="nav-wrap container"><?php wp_nav_menu( array( 'theme_location' => $mobile_menu, 'menu_class' => 'nav container-inner group', 'container' => '', 'menu_id' => '', 'fallback_cb' => false, 'walker' => $walker_menu ) ); ?></div>
 
 				<div class="container">
 					<div class="container-inner">
@@ -444,7 +447,7 @@ function asdb__do_mobile_navigation_menu() {
 				'menu_id'        => 'primary-menu',
 				'menu_class'     => 'menu dropdown mobile-nav',
 				'link_before'    => '<span>',
-				'link_after'     => '</span>'
+				'link_after'     => '</span>',
 			) );
 		?>
 	</nav>
@@ -454,16 +457,16 @@ function asdb__do_mobile_navigation_menu() {
 }
 
 
-function get_post_thumb($args='') {
+function get_post_thumb( $args = '' ) {
 	global $post;
-	$args = isset($args) ? $args : 'thumb-medium';
-	if ( get_post_meta( $post->ID, '_thumb', true ) !='off' ):
+	$args = isset( $args ) ? $args : 'thumb-medium';
+	if ( get_post_meta( $post->ID, '_thumb', true ) != 'off' ) :
 	?>
 		<div class="post-thumbnail">
 			<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
-				<?php if ( has_post_thumbnail() ): ?>
-					<?php the_post_thumbnail($args); ?>
-				<?php elseif ( ot_get_option('placeholder') != 'off' ): ?>
+				<?php if ( has_post_thumbnail() ) :  ?>
+					<?php the_post_thumbnail( $args ); ?>
+				<?php elseif ( ot_get_option( 'placeholder' ) != 'off' ) :  ?>
 					<img src="<?php echo get_template_directory_uri(); ?>/assets/images/no-thumb/thumb-<?php echo $args; ?>.png" alt="<?php the_title(); ?>" />
 				<?php endif; ?>
 			</a>
@@ -473,29 +476,28 @@ function get_post_thumb($args='') {
 }
 
 if ( ! function_exists( 'asdb_get_thumb' ) ) {
-    function asdb_get_thumb( $args ) {
-    global $post;
-    $args = isset($args) ? $args : 'thumb-medium';
-    $gthumb = ot_get_option( 'featured-image' );
-    $placeholder = ot_get_option( 'placeholder' );
-    $lthumb = get_post_meta( $post->ID, '_thumb', true );
-    if ( is_single() && $lthumb === 'off' ) {
-    echo '<!-- lthumb off -->';
-    } elseif ( is_single() && $gthumb === 'off' ) {
-    echo '<!-- gthumb off -->';
-    } else {
-        if ( has_post_thumbnail() && ! post_password_required() ) { ?>
-        <div class="entry-thumbnail">
-            <?php edit_post_link( '<i class="fa fa-edit"></i>', '<small class="edit-link pull-right">', '</small>' ); ?>
-            <?php the_post_thumbnail($args); ?>
-        </div>
-        <?php } //.entry-thumbnail
-        elseif ( !is_single() && ot_get_option('placeholder') != 'off' ) { ?>
-        <div class="entry-thumbnail">
-          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/td_696x0.png" alt="<?php the_title(); ?>" />
-        </div>
-        <?php }
-
-    }
-  }
+	function asdb_get_thumb( $args ) {
+	global $post;
+	$args = isset( $args ) ? $args : 'thumb-medium';
+	$gthumb = ot_get_option( 'featured-image' );
+	$placeholder = ot_get_option( 'placeholder' );
+	$lthumb = get_post_meta( $post->ID, '_thumb', true );
+	if ( is_single() && $lthumb === 'off' ) {
+			echo '<!-- lthumb off -->';
+	} elseif ( is_single() && $gthumb === 'off' ) {
+			echo '<!-- gthumb off -->';
+	} else {
+			if ( has_post_thumbnail() && ! post_password_required() ) { ?>
+			<div class="entry-thumbnail">
+				<?php edit_post_link( '<i class="fa fa-edit"></i>', '<small class="edit-link pull-right">', '</small>' ); ?>
+				<?php the_post_thumbnail( $args ); ?>
+			</div>
+			<?php } //.entry-thumbnail
+			elseif ( ! is_single() && ot_get_option( 'placeholder' ) != 'off' ) { ?>
+			<div class="entry-thumbnail">
+			  <img src="<?php echo get_template_directory_uri(); ?>/assets/images/td_696x0.png" alt="<?php the_title(); ?>" />
+			</div>
+			<?php }
+}
+	}
 }

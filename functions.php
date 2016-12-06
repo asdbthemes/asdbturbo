@@ -101,7 +101,7 @@ function asdb__setup() {
   // This theme uses wp_nav_menu() in one location.
   register_nav_menus( array(
     'primary' => esc_html__( 'Primary Menu', 'asdbturbo' ),
-    'mobile'  => esc_html__( 'Optional Mobile Menu', 'asdbturbo' ),
+    'mobile'  => esc_html__( 'Mobile Menu', 'asdbturbo' ),
   ) );
 
   /**
@@ -259,5 +259,3 @@ function exec_time( $phase = 'start' ){
 	if( $phase == 'end' ) return $collect . ' sec.';
 	else $time_before = $time;
 }
-
-
