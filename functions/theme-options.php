@@ -856,13 +856,18 @@ function custom_theme_options() {
 					'id'		=> 'social-target',
 					'label'		=> 'Link Options',
 					'desc'		=> '',
-					'std'		=> '',
-					'type'		=> 'checkbox',
+					'std'		=> '_blank',
+					'type'		=> 'select',
 					'choices'	=> array(
 						array(
 							'value' => '_blank',
 							'label' => 'Open in new window',
 						),
+						array(
+							'value' => '_self',
+							'label' => 'Open in current window',
+						),
+
 					),
 				),
 			),
